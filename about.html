@@ -2,20 +2,20 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thanwarath | About Me</title>
+
 <style>
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
+
     html {
         scroll-behavior: smooth;
     }
+
     body {
         font-family: Arial, sans-serif;
         background:
@@ -39,34 +39,45 @@
                 #fff7fb,
                 #fff0f6
             );
+
         color: #6b4055;
         line-height: 1.7;
         min-height: 100vh;
     }
+
     /* ===== Navigation ===== */
+
     nav {
         position: sticky;
         top: 0;
         z-index: 100;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         padding: 18px 8%;
+
         background: rgba(255, 255, 255, 0.90);
         backdrop-filter: blur(12px);
+
         border-bottom: 1px solid #f3b6cf;
+
         box-shadow:
             0 5px 20px
             rgba(220, 120, 160, 0.08);
     }
+
     .logo {
         font-size: 22px;
         font-weight: bold;
         color: #e17ba8;
     }
+
     .logo::before {
         content: "♡ ";
     }
+
     nav a {
         color: #d96f9f;
         text-decoration: none;
@@ -74,386 +85,575 @@
         transition: 0.3s;
         font-weight: 500;
     }
+
     nav a:hover {
         color: #c94f84;
     }
+
     /* ===== Main Content ===== */
+
     .container {
         max-width: 900px;
         margin: auto;
         padding: 70px 20px;
     }
+
     .section-title {
         display: flex;
         align-items: center;
         gap: 15px;
         margin-bottom: 30px;
     }
+
     .section-number {
         color: #e17ba8;
         font-family: monospace;
         font-weight: bold;
     }
+
     h1 {
         font-size: 36px;
         color: #693f54;
     }
+
     .section-line {
         height: 3px;
         flex: 1;
+
         background: linear-gradient(
             90deg,
             #f6a9c8,
             #e17ba8,
             #ffd1e2
         );
+
         border-radius: 10px;
     }
+
     /* ===== Profile ===== */
+
     .profile-card {
         position: relative;
         overflow: hidden;
+
         background: rgba(255, 255, 255, 0.90);
+
         border: 2px solid #f3b6cf;
         border-radius: 28px;
+
         padding: 35px;
+
         text-align: center;
+
         box-shadow:
             0 10px 35px
             rgba(220, 120, 160, 0.15);
+
         margin-bottom: 25px;
     }
+
     .profile-card::before {
         content: "♡  ✦  ♡  ✦  ♡";
+
         position: absolute;
         top: 10px;
         left: 0;
         right: 0;
+
         color: #f4b1ca;
         font-size: 18px;
         letter-spacing: 12px;
         opacity: 0.7;
     }
+
     .profile-wrap {
         position: relative;
+
         width: 150px;
         height: 150px;
+
         margin: 0 auto 25px;
     }
+
     .profile {
         width: 150px;
         height: 150px;
+
         object-fit: cover;
+
         border-radius: 50%;
         border: 5px solid white;
+
         box-shadow:
             0 10px 25px
             rgba(220, 120, 160, 0.30);
-        animation: profileFloat 4s ease-in-out infinite;
+
+        animation:
+            profileFloat
+            4s ease-in-out infinite;
+
         position: relative;
         z-index: 2;
     }
+
     .profile-wrap::before {
         content: "";
+
         position: absolute;
+
         width: 170px;
         height: 170px;
+
         border: 2px dashed #f1a5c4;
         border-radius: 50%;
+
         top: -10px;
         left: -10px;
-        animation: spin 12s linear infinite;
+
+        animation:
+            spin
+            12s linear infinite;
     }
+
     .profile-wrap::after {
         content: "";
+
         position: absolute;
+
         width: 160px;
         height: 160px;
+
         border-radius: 50%;
-        background: rgba(255, 182, 210, 0.25);
+
+        background:
+            rgba(255, 182, 210, 0.25);
+
         filter: blur(12px);
+
         top: -5px;
         left: -5px;
-        animation: glow 3s ease-in-out infinite;
+
+        animation:
+            glow
+            3s ease-in-out infinite;
+
         z-index: 0;
     }
+
     .deco {
         position: absolute;
+
         z-index: 3;
+
         color: #e58aae;
+
         font-size: 20px;
-        animation: twinkle 2s ease-in-out infinite;
+
+        animation:
+            twinkle
+            2s ease-in-out infinite;
     }
+
     .heart-one {
         top: 5px;
         left: -15px;
     }
+
     .heart-two {
         bottom: 10px;
         right: -15px;
+
         color: #f2a8c5;
+
         animation-delay: 0.7s;
     }
+
     .star-one {
         top: -15px;
         right: 15px;
+
         animation-delay: 1s;
     }
+
     .star-two {
         bottom: 15px;
         left: -10px;
+
         color: #efa0c0;
+
         animation-delay: 1.4s;
     }
+
     .profile-card h2 {
         color: #693f54;
         font-size: 27px;
         margin-bottom: 5px;
     }
+
     .profile-card .student {
         color: #df719f;
         font-weight: bold;
         margin-bottom: 15px;
     }
+
     .profile-card p {
         color: #806674;
     }
+
     /* ===== Info Section ===== */
+
     .info-box {
         background: rgba(255, 255, 255, 0.90);
+
         border: 2px solid #f3bfd4;
         border-radius: 22px;
+
         padding: 30px;
         margin-bottom: 25px;
+
         box-shadow:
             0 10px 30px
             rgba(220, 120, 160, 0.12);
+
         transition: 0.3s;
     }
+
     .info-box:hover {
         transform: translateY(-3px);
+
         box-shadow:
             0 12px 30px
             rgba(220, 120, 160, 0.18);
     }
+
     .info-box h2 {
         color: #df719f;
         font-size: 23px;
         margin-bottom: 15px;
     }
+
     .info-box h2::before {
         content: "♡ ";
         color: #f0a2bf;
     }
+
     .info-box p {
         color: #806674;
     }
+
     /* ===== Interest Cards ===== */
+
     .interest-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
         gap: 15px;
+
         margin-top: 20px;
     }
+
     .interest-card {
         background: rgba(255, 255, 255, 0.92);
+
         border: 1.5px solid #f3c4d8;
         border-radius: 18px;
+
         padding: 20px;
+
         transition: 0.3s;
+
         position: relative;
     }
+
     .interest-card::after {
         content: "♡";
+
         position: absolute;
+
         right: 15px;
         top: 12px;
+
         color: #f2abc7;
         font-size: 20px;
     }
+
     .interest-card:hover {
-        transform: translateY(-5px) scale(1.01);
+        transform:
+            translateY(-5px)
+            scale(1.01);
+
         border-color: #e996b8;
+
         box-shadow:
             0 10px 25px
             rgba(220, 120, 160, 0.18);
     }
+
     .interest-card h3 {
         color: #c85e8d;
         font-size: 18px;
         margin-bottom: 5px;
     }
+
     .interest-card p {
         font-size: 14px;
         color: #806674;
     }
+
     /* ===== Goal ===== */
+
     .goal {
         text-align: center;
+
         background:
             linear-gradient(
                 135deg,
                 rgba(255, 190, 215, 0.45),
                 rgba(255, 225, 237, 0.65)
             );
+
         border: 2px solid #f2b5cd;
         border-radius: 22px;
+
         padding: 30px;
         margin-bottom: 35px;
+
         box-shadow:
             0 10px 30px
             rgba(220, 120, 160, 0.10);
     }
+
     .goal h2 {
         color: #d96899;
         margin-bottom: 10px;
     }
+
     .goal h2::before {
         content: "🌷 ";
     }
+
     .goal p {
         color: #806674;
     }
+
     /* ===== Quote ===== */
+
     .quote {
         text-align: center;
+
         color: #d96899;
+
         font-size: 18px;
         font-weight: bold;
+
         margin-top: 25px;
         padding: 20px;
+
         position: relative;
     }
+
     .quote::before {
         content: "“";
+
         font-size: 45px;
+
         color: #f1b0c9;
+
         position: absolute;
+
         left: 20px;
         top: 0;
     }
+
     .quote::after {
         content: "”";
+
         font-size: 45px;
+
         color: #f1b0c9;
+
         position: absolute;
+
         right: 20px;
         bottom: -15px;
     }
+
     /* ===== Page Navigation ===== */
+
     .page-navigation {
         width: 100%;
+
         display: flex;
+
         justify-content: space-between;
         align-items: center;
+
         gap: 20px;
+
         margin-top: 35px;
     }
+
     .page-navigation a {
         flex: 1;
+
         max-width: 300px;
+
         padding: 16px 24px;
-        background: rgba(255, 255, 255, 0.90);
+
+        background:
+            rgba(255, 255, 255, 0.90);
+
         border: 2px solid #f3b6cf;
+
         border-radius: 20px;
+
         color: #c85e8d;
+
         text-decoration: none;
+
         font-size: 16px;
         font-weight: bold;
+
         text-align: center;
+
         box-shadow:
             0 8px 20px
             rgba(220, 120, 160, 0.12);
-        transition: all 0.3s ease;
+
+        transition:
+            all 0.3s ease;
     }
+
     .page-navigation a:hover {
         transform: translateY(-4px);
+
         background: #ffffff;
+
         border-color: #e58bae;
+
         color: #c34f82;
+
         box-shadow:
             0 12px 25px
             rgba(220, 120, 160, 0.20);
     }
+
     /* ===== Footer ===== */
+
     footer {
         text-align: center;
+
         padding: 40px 20px;
+
         border-top: 1px solid #f3b6cf;
+
         color: #ad8999;
+
         font-size: 13px;
-        background: rgba(255, 255, 255, 0.35);
+
+        background:
+            rgba(255, 255, 255, 0.35);
     }
+
     footer::before {
         content: "♡  ✿  ♡  ✿  ♡";
+
         display: block;
+
         color: #efa5c2;
+
         font-size: 18px;
+
         margin-bottom: 8px;
     }
+
     /* ===== Animation ===== */
+
     @keyframes profileFloat {
+
         0%,
         100% {
             transform: translateY(0);
         }
+
         50% {
             transform: translateY(-7px);
         }
     }
+
     @keyframes spin {
+
         from {
             transform: rotate(0deg);
         }
+
         to {
             transform: rotate(360deg);
         }
     }
+
     @keyframes glow {
+
         0%,
         100% {
             opacity: 0.5;
             transform: scale(1);
         }
+
         50% {
             opacity: 0.9;
             transform: scale(1.08);
         }
     }
+
     @keyframes twinkle {
+
         0%,
         100% {
             opacity: 0.4;
             transform: scale(0.9);
         }
+
         50% {
             opacity: 1;
             transform: scale(1.2);
         }
     }
+
     /* ===== Mobile ===== */
+
     @media (max-width: 600px) {
+
         nav {
             padding: 15px 20px;
         }
+
         nav div:last-child {
             display: none;
         }
+
         .container {
             padding: 50px 15px;
         }
+
         h1 {
             font-size: 28px;
         }
+
         .profile-card {
             padding: 30px 20px;
         }
+
         .interest-grid {
             grid-template-columns: 1fr;
         }
+
         .page-navigation {
             flex-direction: column;
         }
+
         .page-navigation a {
             max-width: 100%;
             width: 100%;
@@ -461,6 +661,155 @@
     }
 </style>
 </head>
+
 <body>
+
+<nav>
+    <div class="logo">
+        Thanwarath
+    </div>
+
+    <div>
+        <a href="#about">About Me</a>
+        <a href="#interest">Interest</a>
+        <a href="#goal">Goal</a>
+    </div>
+</nav>
+
+
+<main class="container">
+
+    <div class="section-title">
+        <span class="section-number">01</span>
+        <h1>About Me</h1>
+        <div class="section-line"></div>
+    </div>
+
+
+    <div class="profile-card" id="about">
+
+        <div class="profile-wrap">
+
+            <span class="deco heart-one">♡</span>
+            <span class="deco heart-two">♡</span>
+            <span class="deco star-one">✦</span>
+            <span class="deco star-two">✦</span>
+
+            
+            <img
+                class="profile"
+                alt="Thanwarath"
+                src="data:image/jpeg;base64,''' + b64 + r'''"
+            >
+
+        </div>
+
+        <h2>Thanwarath</h2>
+
+        <div class="student">
+            About Me ♡
+        </div>
+
+        <p>
+            Welcome to my personal page.
+        </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <h2>About Me</h2>
+
+        <p>
+            Hello! My name is Thanwarath.
+            This is my personal website where
+            I can introduce myself, my interests,
+            and my goals for the future.
+        </p>
+
+    </div>
+
+
+    <div class="info-box" id="interest">
+
+        <h2>My Interests</h2>
+
+        <div class="interest-grid">
+
+            <div class="interest-card">
+                <h3>📚 Learning</h3>
+                <p>
+                    I enjoy learning new things
+                    and improving myself.
+                </p>
+            </div>
+
+            <div class="interest-card">
+                <h3>💻 Computer</h3>
+                <p>
+                    I am interested in computers
+                    and technology.
+                </p>
+            </div>
+
+            <div class="interest-card">
+                <h3>🔬 Science</h3>
+                <p>
+                    I enjoy science and
+                    exploring new knowledge.
+                </p>
+            </div>
+
+            <div class="interest-card">
+                <h3>✨ Creativity</h3>
+                <p>
+                    I like creating and designing
+                    new things.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="goal" id="goal">
+
+        <h2>My Goal</h2>
+
+        <p>
+            I want to continue developing myself,
+            follow my dreams, and achieve my goals
+            in the future.
+        </p>
+
+    </div>
+
+
+    <div class="quote">
+        Believe in yourself and never give up ♡
+    </div>
+
+
+    <div class="page-navigation">
+
+        <a href="#about">
+            ♡ About Me
+        </a>
+
+        <a href="#interest">
+            ✦ My Interests
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+    Thanwarath | About Me
+</footer>
+
 </body>
 </html>
