@@ -8,12 +8,14 @@
     content="width=device-width, initial-scale=1.0"
 >
 <title>Thanwarath | Portfolio</title>
+
 <style>
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
+
     body {
         font-family: Arial, sans-serif;
         background:
@@ -30,6 +32,7 @@
         align-items: center;
         padding: 30px;
     }
+
     /* ===== Card ===== */
     .card {
         width: 100%;
@@ -40,18 +43,17 @@
         padding: 50px 35px;
         text-align: center;
         box-shadow:
-            0 20px 60px
-            rgba(220, 120, 160, 0.20),
-            0 5px 25px
-            rgba(240, 160, 190, 0.12);
+            0 20px 60px rgba(220, 120, 160, 0.20),
+            0 5px 25px rgba(240, 160, 190, 0.12);
         transition: 0.3s;
     }
+
     .card:hover {
         transform: translateY(-5px);
         box-shadow:
-            0 25px 70px
-            rgba(220, 120, 160, 0.35);
+            0 25px 70px rgba(220, 120, 160, 0.35);
     }
+
     /* ===== รูปโปรไฟล์ ===== */
     .profile-wrap {
         position: relative;
@@ -60,6 +62,7 @@
         margin: 0 auto 25px;
         animation: profileFloat 4s ease-in-out infinite;
     }
+
     .profile {
         width: 150px;
         height: 150px;
@@ -72,9 +75,11 @@
         transition: 0.3s;
         display: block;
     }
+
     .profile:hover {
         transform: scale(1.05);
     }
+
     /* ===== วงกลมเส้นประรอบรูป ===== */
     .profile-wrap::before {
         content: "";
@@ -88,6 +93,7 @@
         animation: spin 12s linear infinite;
         pointer-events: none;
     }
+
     /* ===== วงแสงด้านหลัง ===== */
     .profile-wrap::after {
         content: "";
@@ -106,6 +112,7 @@
         animation: glow 3s ease-in-out infinite;
         z-index: -1;
     }
+
     /* ===== ของตกแต่ง ===== */
     .deco {
         position: absolute;
@@ -113,106 +120,113 @@
         pointer-events: none;
         user-select: none;
     }
+
     /* หัวใจ */
     .heart {
         color: #e58aae;
         text-shadow:
-            0 4px 12px
-            rgba(229, 138, 174, 0.25);
+            0 4px 12px rgba(229, 138, 174, 0.25);
     }
+
     /* ดาว */
     .star {
         color: #e58aae;
         text-shadow:
-            0 4px 12px
-            rgba(229, 138, 174, 0.25);
+            0 4px 12px rgba(229, 138, 174, 0.25);
     }
+
     /* หัวใจดวงที่ 1 */
     .heart-1 {
         top: 2px;
         right: -30px;
         font-size: 28px;
-        animation:
-            floatHeart 3s ease-in-out infinite;
+        animation: floatHeart 3s ease-in-out infinite;
     }
+
     /* หัวใจดวงที่ 2 */
     .heart-2 {
         bottom: 8px;
         left: -28px;
         font-size: 22px;
-        animation:
-            floatHeart2 3.5s ease-in-out infinite;
+        animation: floatHeart2 3.5s ease-in-out infinite;
     }
+
     /* ดาวดวงที่ 1 */
     .star-1 {
         top: 32px;
         left: -32px;
         font-size: 23px;
-        animation:
-            twinkle 2s ease-in-out infinite;
+        animation: twinkle 2s ease-in-out infinite;
     }
+
     /* ดาวดวงที่ 2 */
     .star-2 {
         bottom: -10px;
         right: 5px;
         font-size: 19px;
-        animation:
-            twinkle 2.3s ease-in-out infinite 0.5s;
+        animation: twinkle 2.3s ease-in-out infinite 0.5s;
     }
+
     /* ประกาย */
     .sparkle-1 {
         top: -13px;
         right: 20px;
         color: #f0a2bf;
         font-size: 17px;
-        animation:
-            twinkle 1.8s ease-in-out infinite 0.3s;
+        animation: twinkle 1.8s ease-in-out infinite 0.3s;
     }
+
     .sparkle-2 {
         bottom: 35px;
         right: -37px;
         color: #f0a2bf;
         font-size: 14px;
-        animation:
-            twinkle 2.4s ease-in-out infinite 0.8s;
+        animation: twinkle 2.4s ease-in-out infinite 0.8s;
     }
+
     .sparkle-3 {
         top: 65px;
         left: -43px;
         color: #e58aae;
         font-size: 11px;
-        animation:
-            twinkle 2.1s ease-in-out infinite 0.6s;
+        animation: twinkle 2.1s ease-in-out infinite 0.6s;
     }
+
     /* ===== Animation ===== */
     @keyframes profileFloat {
         0%,
         100% {
             transform: translateY(0);
         }
+
         50% {
             transform: translateY(-6px);
         }
     }
+
     @keyframes spin {
         from {
             transform: rotate(0deg);
         }
+
         to {
             transform: rotate(360deg);
         }
     }
+
     @keyframes glow {
         0%,
         100% {
             opacity: 0.5;
             transform: scale(0.95);
         }
+
         50% {
             opacity: 1;
             transform: scale(1.05);
         }
     }
+
     @keyframes floatHeart {
         0%,
         100% {
@@ -220,12 +234,14 @@
                 translate(0, 0)
                 rotate(-8deg);
         }
+
         50% {
             transform:
                 translate(5px, -10px)
                 rotate(8deg);
         }
     }
+
     @keyframes floatHeart2 {
         0%,
         100% {
@@ -233,12 +249,14 @@
                 translate(0, 0)
                 rotate(8deg);
         }
+
         50% {
             transform:
                 translate(-5px, -8px)
                 rotate(-8deg);
         }
     }
+
     @keyframes twinkle {
         0%,
         100% {
@@ -247,6 +265,7 @@
                 scale(0.8)
                 rotate(0deg);
         }
+
         50% {
             opacity: 1;
             transform:
@@ -254,35 +273,40 @@
                 rotate(15deg);
         }
     }
+
     /* ===== Text ===== */
     h1 {
         font-size: 42px;
         margin-bottom: 15px;
         color: #6b4055;
     }
+
     h1 span {
         color: #d96f9f;
         text-shadow:
-            0 0 15px
-            rgba(217, 111, 159, 0.25);
+            0 0 15px rgba(217, 111, 159, 0.25);
     }
+
     .intro {
         color: #806674;
         font-size: 18px;
         line-height: 1.8;
         margin-bottom: 25px;
     }
+
     .interest {
         color: #b85f87;
         font-size: 17px;
         margin-bottom: 20px;
     }
+
     .goal {
         color: #d96899;
         font-size: 17px;
         font-weight: bold;
         margin-bottom: 30px;
     }
+
     /* ===== Button ===== */
     .button {
         display: inline-block;
@@ -293,64 +317,76 @@
         border-radius: 12px;
         font-weight: bold;
         box-shadow:
-            0 8px 25px
-            rgba(220, 120, 160, 0.25);
+            0 8px 25px rgba(220, 120, 160, 0.25);
         transition: 0.3s;
     }
+
     .button:hover {
         background: #f0b0c8;
         color: #6b4055;
         transform: translateY(-4px);
         box-shadow:
-            0 12px 30px
-            rgba(220, 120, 160, 0.3);
+            0 12px 30px rgba(220, 120, 160, 0.3);
     }
+
     /* ===== Small Text ===== */
     .small {
         margin-top: 25px;
         color: #a6788d;
         font-size: 13px;
     }
+
     /* ===== Mobile ===== */
     @media (max-width: 600px) {
         body {
             padding: 20px;
         }
+
         .card {
             padding: 40px 22px;
         }
+
         .profile-wrap {
             width: 135px;
             height: 135px;
         }
+
         .profile {
             width: 135px;
             height: 135px;
         }
+
         .profile-wrap::before {
             width: 157px;
             height: 157px;
             top: -11px;
             left: -11px;
         }
+
         .heart-1 {
             right: -25px;
         }
+
         .heart-2 {
             left: -24px;
         }
+
         .star-1 {
             left: -27px;
         }
+
         .sparkle-2 {
             right: -30px;
         }
+
         h1 {
             font-size: 34px;
         }
+
         .intro {
             font-size: 16px;
         }
+
         .interest,
         .goal {
             font-size: 15px;
@@ -358,51 +394,66 @@
     }
 </style>
 </head>
+
 <body>
+
 <div class="card">
+
     <!-- รูปโปรไฟล์ + ของตกแต่ง -->
     <div class="profile-wrap">
+
+        <!-- รูปภาพ -->
         <img
-      <img src="profile.jpg">
-</a>"
+            src="profile.jpg"
             alt="รูปโปรไฟล์ของธัญวรัตม์"
             class="profile"
         >
+
         <!-- หัวใจ -->
         <span class="deco heart heart-1">
             ♡
         </span>
+
         <span class="deco heart heart-2">
             ♥
         </span>
+
         <!-- ดาว -->
         <span class="deco star star-1">
             ★
         </span>
+
         <span class="deco star star-2">
             ✦
         </span>
+
         <!-- ประกาย -->
         <span class="deco sparkle-1">
             ✧
         </span>
+
         <span class="deco sparkle-2">
             ✦
         </span>
+
         <span class="deco sparkle-3">
             ·
         </span>
+
     </div>
+
     <h1>
         สวัสดีค่ะ ฉันชื่อ
         <span>
             ธัญวรัตม์
         </span>
     </h1>
+
     <p class="intro">
         นักเรียนชั้นมัธยมศึกษาปีที่ 6
         สายการเรียนเตรียมวิศวกรรมศาสตร์
     </p>
+
     <p class="interest">
         🔬 สนใจชีววิทยา
         &nbsp;·&nbsp;
@@ -410,18 +461,23 @@
         &nbsp;·&nbsp;
         🔬 ชอบการทดลอง
     </p>
+
     <p class="goal">
         🎓 เป้าหมายในอนาคต: นักกายภาพบำบัด
     </p>
+
     <a
         href="portfolio.html"
         class="button"
     >
         📁 ดูแฟ้มสะสมงาน
     </a>
+
     <p class="small">
         Portfolio ของ Thanwarath
     </p>
+
 </div>
+
 </body>
 </html>
