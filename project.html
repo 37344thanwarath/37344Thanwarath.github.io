@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tanitta | Projects</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(255, 205, 225, 0.8),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(255, 235, 245, 0.9),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 50% 90%,
+                    rgba(255, 190, 215, 0.65),
+                    transparent 40%
+                ),
+                #fff7fb;
+
+            color: #6b4055;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           TOP NAVIGATION
+        ========================= */
+
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            background: rgba(255, 255, 255, 0.88);
+
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(235, 145, 185, 0.45);
+
+            padding: 15px 20px;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+
+            color: #a65c7d;
+
+            padding: 8px 14px;
+
+            border-radius: 20px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .top-nav a:hover {
+            background: #ffe1ee;
+
+            color: #e05d96;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .container {
+            width: 92%;
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+            padding: 55px 0 30px;
+        }
+
+
+        /* =========================
+           KITTY DECORATION
+        ========================= */
+
+        .kitty-decoration {
+            text-align: center;
+
+            font-size: 45px;
+
+            margin-bottom: 10px;
+
+            animation: kittyFloat 3s ease-in-out infinite;
+
+            filter:
+                drop-shadow(
+                    0 7px 10px
+                    rgba(220, 100, 150, 0.18)
+                );
+        }
+
+        .kitty-bow {
+            display: inline-block;
+
+            color: #ed76a9;
+
+            font-size: 25px;
+
+            margin-left: -10px;
+
+            transform: rotate(-10deg);
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .profile-wrap {
+            position: relative;
+
+            width: 180px;
+            height: 180px;
+
+            margin: 0 auto 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        /* วงกลมรอบรูป */
+
+        .profile-wrap::before {
+            content: "";
+
+            position: absolute;
+
+            width: 202px;
+            height: 202px;
+
+            border: 2px dashed #ef9fc2;
+
+            border-radius: 50%;
+
+            animation: spin 18s linear infinite;
+
+            opacity: 0.75;
+        }
+
+
+        /* แสงชมพู */
+
+        .profile-wrap::after {
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255, 170, 205, 0.35),
+                    transparent 65%
+                );
+
+            animation: glow 3s ease-in-out infinite;
+        }
+
+
+        .profile {
+            position: relative;
+
+            z-index: 3;
+
+            width: 180px;
+            height: 180px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 5px solid white;
+
+            box-shadow:
+                0 12px 30px
+                rgba(220, 120, 165, 0.25);
+
+            animation: profileFloat 4s ease-in-out infinite;
+        }
+
+
+        /* =========================
+           DECORATIONS
+        ========================= */
+
+        .photo-deco {
+            position: absolute;
+
+            z-index: 5;
+
+            font-size: 25px;
+
+            pointer-events: none;
+
+            user-select: none;
+        }
+
+        .heart-one {
+            top: 5px;
+            left: -5px;
+
+            color: #ed78a8;
+
+            animation:
+                floatHeart 3.5s ease-in-out infinite;
+        }
+
+        .heart-two {
+            right: -8px;
+            bottom: 22px;
+
+            color: #f5a8c7;
+
+            font-size: 20px;
+
+            animation:
+                floatHeart2 4s ease-in-out infinite;
+        }
+
+        .star-one {
+            top: 28px;
+            right: -12px;
+
+            color: #f19ac0;
+
+            font-size: 21px;
+
+            animation:
+                twinkle 2s ease-in-out infinite;
+        }
+
+        .star-two {
+            left: -15px;
+            bottom: 38px;
+
+            color: #e985b0;
+
+            font-size: 18px;
+
+            animation:
+                twinkle 2.5s ease-in-out infinite;
+        }
+
+        .sparkle-one {
+            top: -5px;
+            left: 52px;
+
+            color: #f4b2cd;
+
+            font-size: 16px;
+
+            animation:
+                twinkle 2.2s ease-in-out infinite;
+        }
+
+        .sparkle-two {
+            right: 42px;
+            bottom: -5px;
+
+            color: #ee8eb8;
+
+            font-size: 16px;
+
+            animation:
+                twinkle 1.8s ease-in-out infinite;
+        }
+
+
+        /* =========================
+           INTRO TEXT
+        ========================= */
+
+        .intro h1 {
+            font-size: clamp(32px, 5vw, 52px);
+
+            color: #8f4b68;
+
+            margin-bottom: 8px;
+        }
+
+        .intro h2 {
+            font-size: clamp(20px, 3vw, 28px);
+
+            color: #a65c7d;
+
+            font-weight: 600;
+
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            max-width: 650px;
+
+            margin: 0 auto 10px;
+
+            line-height: 1.8;
+
+            color: #806271;
+
+            font-size: 15px;
+        }
+
+        .dream {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 9px 18px;
+
+            border-radius: 30px;
+
+            background: rgba(255, 255, 255, 0.82);
+
+            border: 1px solid #f0b5ce;
+
+            color: #b45e83;
+
+            font-size: 14px;
+
+            box-shadow:
+                0 6px 18px
+                rgba(220, 120, 165, 0.12);
+        }
+
+
+        /* =========================
+           PORTFOLIO LIST
+        ========================= */
+
+        .portfolio-list {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 16px;
+
+            max-width: 850px;
+
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns:
+                65px 65px 1fr 45px;
+
+            align-items: center;
+
+            gap: 18px;
+
+            padding: 22px 25px;
+
+            text-decoration: none;
+
+            background:
+                rgba(255, 255, 255, 0.88);
+
+            border: 1px solid #f1b4cf;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 10px 25px
+                rgba(220, 120, 165, 0.10);
+
+            transition:
+                transform 0.3s,
+                box-shadow 0.3s,
+                border-color 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateX(7px);
+
+            border-color: #e77eaa;
+
+            box-shadow:
+                0 15px 30px
+                rgba(220, 100, 155, 0.18);
+        }
+
+        .number {
+            font-size: 18px;
+
+            color: #d48ca9;
+
+            font-weight: 700;
+
+            text-align: center;
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 18px;
+
+            background: #fff0f7;
+
+            border: 1px solid #f5c3d8;
+
+            font-size: 27px;
+        }
+
+        .item-content h3 {
+            color: #a65378;
+
+            font-size: 20px;
+
+            margin-bottom: 5px;
+        }
+
+        .item-content p {
+            color: #806271;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+        .arrow {
+            font-size: 25px;
+
+            color: #df80aa;
+
+            transition: 0.3s;
+        }
+
+        .portfolio-item:hover .arrow {
+            transform: translateX(5px);
+
+            color: #d9538c;
+        }
+
+
+        /* =========================
+           PROJECT BOX
+        ========================= */
+
+        .project-box {
+            position: relative;
+
+            max-width: 850px;
+
+            margin: 25px auto;
+
+            padding: 30px;
+
+            background:
+                rgba(255, 255, 255, 0.9);
+
+            border: 2px solid #f0b0cc;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 35px
+                rgba(220, 120, 165, 0.12);
+        }
+
+        .project-box h2 {
+            color: #a65378;
+
+            font-size: 22px;
+
+            margin-bottom: 12px;
+        }
+
+        .project-box p {
+            color: #806271;
+
+            line-height: 1.8;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           CERTIFICATE IMAGE
+        ========================= */
+
+        .certificate {
+            text-align: center;
+
+            margin: 20px 0;
+        }
+
+        .certificate a {
+            display: inline-block;
+
+            text-decoration: none;
+        }
+
+        .certificate img {
+            width: 100%;
+
+            max-width: 500px;
+
+            height: auto;
+
+            border-radius: 16px;
+
+            border: 3px solid #f0a6c5;
+
+            box-shadow:
+                0 10px 30px
+                rgba(220, 110, 160, 0.18);
+
+            transition: 0.3s;
+        }
+
+        .certificate img:hover {
+            transform: scale(1.02);
+
+            box-shadow:
+                0 15px 35px
+                rgba(220, 100, 155, 0.25);
+        }
+
+        .certificate-text {
+            display: block;
+
+            margin-top: 10px;
+
+            color: #c15c88;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           TAGS
+        ========================= */
+
+        .tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 15px;
+        }
+
+        .tag {
+            padding: 6px 12px;
+
+            background: #ffe3ef;
+
+            color: #b4587e;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            border: 1px solid #f5bdd5;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .project-link {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 9px 16px;
+
+            background: #e77eaa;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 12px;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 7px 18px
+                rgba(220, 100, 155, 0.18);
+        }
+
+        .project-link:hover {
+            background: #d9578e;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           PAGE NAVIGATION
+        ========================= */
+
+        .page-navigation {
+            width: 100%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            margin-top: 40px;
+        }
+
+        .page-navigation a {
+            flex: 1;
+
+            max-width: 300px;
+
+            padding: 16px 24px;
+
+            background:
+                rgba(255, 255, 255, 0.9);
+
+            border: 2px solid #f0b0cc;
+
+            border-radius: 20px;
+
+            color: #a65378;
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 20px
+                rgba(220, 120, 165, 0.12);
+
+            transition: all 0.3s ease;
+        }
+
+        .page-navigation a:hover {
+            transform: translateY(-4px);
+
+            background: #fff;
+
+            border-color: #e77eaa;
+
+            color: #d4578d;
+
+            box-shadow:
+                0 12px 25px
+                rgba(220, 100, 155, 0.20);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 45px 20px 30px;
+
+            color: #b88b9e;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes profileFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-7px);
+            }
+        }
+
+        @keyframes kittyFloat {
+
+            0%,
+            100% {
+                transform: translateY(0)
+                           rotate(-3deg);
+            }
+
+            50% {
+                transform: translateY(-7px)
+                           rotate(3deg);
+            }
+        }
+
+        @keyframes spin {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                transform: scale(0.95);
+
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.05);
+
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes floatHeart {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0)
+                    rotate(-8deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-10px)
+                    rotate(8deg);
+            }
+        }
+
+        @keyframes floatHeart2 {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0)
+                    rotate(8deg);
+            }
+
+            50% {
+                transform:
+                    translateY(8px)
+                    rotate(-8deg);
+            }
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                transform: scale(0.8);
+
+                opacity: 0.45;
+            }
+
+            50% {
+                transform: scale(1.25);
+
+                opacity: 1;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .top-nav {
+                padding: 12px 10px;
+            }
+
+            .top-nav a {
+                font-size: 13px;
+            }
+
+            .container {
+                width: 92%;
+
+                padding-top: 40px;
+            }
+
+            .portfolio-item {
+                grid-template-columns:
+                    45px 55px 1fr 25px;
+
+                gap: 10px;
+
+                padding: 18px 15px;
+            }
+
+            .item-content h3 {
+                font-size: 17px;
+            }
+
+            .item-content p {
+                font-size: 13px;
+            }
+
+            .project-box {
+                padding: 22px 18px;
+            }
+
+            .page-navigation {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+            .page-navigation a {
+                width: 100%;
+
+                max-width: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         TOP NAVIGATION
+    ========================= -->
+
+    <nav class="top-nav">
+
+        <div class="nav-container">
+
+            <a href="index.html">
+                🏠 Home
+            </a>
+
+            <a href="portfolio.html">
+                🎀 Portfolio
+            </a>
+
+            <a href="projects.html">
+                🐱 Projects
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <main class="container">
+
+
+        <!-- Kitty -->
+
+        <div class="kitty-decoration">
+            🐱
+            <span class="kitty-bow">🎀</span>
+        </div>
+
+
+        <!-- =========================
+             TITLE
+        ========================= -->
+
+        <div class="intro">
+
+            <h1>
+                My Projects ♡
+            </h1>
+
+            <p>
+                รวมผลงานและกิจกรรมที่ฉันได้เรียนรู้
+                และภาคภูมิใจ
+            </p>
+
+            <div class="dream">
+                🎀 Learning · Experiment · Experience 🎀
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PROJECT 1
+        ========================= -->
+
+        <div class="project-box">
+
+            <h2>
+                🍓 โครงงานทำน้ำหมักชีวภาพจากเปลือกผลไม้
+            </h2>
+
+            <p>
+                โครงงานศึกษาการทำน้ำหมักชีวภาพ
+                จากเปลือกผลไม้ โดยนำวัสดุเหลือใช้
+                จากธรรมชาติมาประยุกต์ใช้ให้เกิดประโยชน์
+            </p>
+
+            <p>
+                ได้เรียนรู้กระบวนการทดลอง
+                การเตรียมวัสดุ การหมัก
+                การเก็บข้อมูล และการสังเกตผล
+                จากการทดลองจริง
+            </p>
+
+            <p>
+                <strong>ทักษะที่ได้:</strong>
+                Chemistry · Biology · Experiment ·
+                Data Analysis
+            </p>
+
+            <div class="tags">
+
+                <span class="tag">
+                    🧪 Chemistry
+                </span>
+
+                <span class="tag">
+                    🍓 Biology
+                </span>
+
+                <span class="tag">
+                    🔬 Experiment
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PROJECT 2
+        ========================= -->
+
+        <div class="project-box">
+
+            <h2>
+                🏆 การแข่งขัน Multi Skills Competition
+            </h2>
+
+            <p>
+                เข้าร่วมกิจกรรมการแข่งขัน
+                <strong>
+                    Multi Skills Competition
+                </strong>
+                ประเภทสามัญระดับชั้น ม.1–ม.3
+            </p>
+
+            <p>
+                จัดขึ้นในงานการแข่งขันทักษะวิชาการ
+                และการประกวดสิ่งประดิษฐ์นักเรียน
+                โรงเรียนเอกชน จังหวัดอุดรธานี
+                ครั้งที่ 3 ประจำปีการศึกษา 2565
+            </p>
+
+
+            <!-- รูปเกียรติบัตร -->
+
+            <div class="certificate">
+
+                <a
+                    href="IMG_1090.jpeg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <img
+                        src="IMG_1090.jpeg"
+                        alt="เกียรติบัตรการแข่งขัน Multi Skills Competition"
+                    >
+
+                </a>
+
+                <span class="certificate-text">
+                    🎀 คลิกที่รูปเพื่อเปิดเกียรติบัตร
+                </span>
+
+            </div>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    🏆 Competition
+                </span>
+
+                <span class="tag">
+                    📚 Multi Skills
+                </span>
+
+                <span class="tag">
+                    🎀 Activity
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PAGE NAVIGATION
+        ========================= -->
+
+        <div class="page-navigation">
+
+            <a href="portfolio.html">
+                ← Portfolio
+            </a>
+
+            <a href="index.html">
+                🏠 กลับหน้า Home
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        🎀 Designed & Built by Thanwarath 🎀
+
+        <br>
+
+        © 2026 Thanwarath
+
+    </footer>
+
+
+</body>
+
+</html>
