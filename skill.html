@@ -2,8 +2,13 @@
 <html lang="th">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Thanwarath | Skills</title>
 
@@ -45,91 +50,131 @@
             overflow-x: hidden;
         }
 
+
         /* ================= DECORATIONS ================= */
 
         body::before {
             content: "🎀";
+
             position: fixed;
+
             top: 90px;
             left: 25px;
+
             font-size: 45px;
+
             opacity: 0.45;
+
             animation: float 4s ease-in-out infinite;
+
             pointer-events: none;
         }
 
+
         body::after {
             content: "♡  ✦  ♡";
+
             position: fixed;
+
             right: 25px;
             bottom: 80px;
+
             font-size: 25px;
+
             color: #e889ad;
+
             opacity: 0.55;
+
             animation: twinkle 2.5s ease-in-out infinite;
+
             pointer-events: none;
         }
+
 
         /* ================= NAVBAR ================= */
 
         nav {
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
 
             width: 100%;
+
             padding: 18px 7%;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             background: rgba(255, 255, 255, 0.90);
 
             backdrop-filter: blur(12px);
+
             -webkit-backdrop-filter: blur(12px);
 
             border-bottom: 2px solid #f3b6cf;
 
             box-shadow:
-                0 4px 15px rgba(224, 126, 164, 0.08);
+                0 4px 15px
+                rgba(224, 126, 164, 0.08);
         }
+
 
         .logo {
             font-size: 25px;
+
             font-weight: bold;
+
             color: #d85f91;
         }
 
+
         .logo::after {
             content: " 🎀";
+
             font-size: 17px;
         }
 
+
         .nav-links {
             display: flex;
+
             gap: 25px;
         }
 
+
         .nav-links a {
             text-decoration: none;
+
             color: #a95879;
+
             font-weight: bold;
+
             transition: 0.3s;
         }
 
+
         .nav-links a:hover {
             color: #e05f96;
+
             transform: translateY(-2px);
         }
+
 
         /* ================= CONTAINER ================= */
 
         .container {
             width: 90%;
+
             max-width: 1000px;
+
             margin: 55px auto;
         }
+
 
         /* ================= CARD ================= */
 
@@ -137,73 +182,98 @@
             background: rgba(255, 255, 255, 0.92);
 
             border: 2px solid #f3b6cf;
+
             border-radius: 28px;
 
             padding: 45px 35px;
 
             box-shadow:
-                0 20px 50px rgba(221, 112, 157, 0.18);
+                0 20px 50px
+                rgba(221, 112, 157, 0.18);
 
             margin-bottom: 35px;
+
             position: relative;
         }
+
 
         .card::before {
             content: "🎀";
 
             position: absolute;
+
             top: -25px;
             right: 35px;
 
             font-size: 48px;
+
             transform: rotate(10deg);
         }
+
 
         /* ================= TITLE ================= */
 
         .section-title {
             text-align: center;
+
             margin-bottom: 35px;
         }
+
 
         .section-title .number {
             display: block;
 
             font-size: 18px;
+
             font-weight: bold;
 
             color: #e18aae;
+
             margin-bottom: 8px;
         }
 
+
         .section-title h1 {
             font-size: 40px;
+
             color: #b94f79;
+
             margin-bottom: 10px;
         }
 
+
         .section-title h1::before {
             content: "♡ ";
+
             color: #e879a5;
         }
+
 
         .section-title h1::after {
             content: " ♡";
+
             color: #e879a5;
         }
 
+
         .section-title p {
             color: #c47a99;
+
             font-size: 17px;
         }
+
 
         /* ================= SKILLS ================= */
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
             gap: 22px;
         }
+
 
         .skill-card {
             padding: 28px;
@@ -216,27 +286,34 @@
                 );
 
             border: 2px solid #f2bfd4;
+
             border-radius: 22px;
 
             text-align: center;
+
             transition: 0.3s;
 
             box-shadow:
-                0 10px 25px rgba(210, 105, 150, 0.10);
+                0 10px 25px
+                rgba(210, 105, 150, 0.10);
 
             position: relative;
         }
+
 
         .skill-card::after {
             content: "♡";
 
             position: absolute;
+
             top: 10px;
             right: 15px;
 
             color: #ed9cba;
+
             font-size: 18px;
         }
+
 
         .skill-card:hover {
             transform: translateY(-6px);
@@ -244,24 +321,33 @@
             border-color: #e58aad;
 
             box-shadow:
-                0 15px 30px rgba(210, 105, 150, 0.20);
+                0 15px 30px
+                rgba(210, 105, 150, 0.20);
         }
+
 
         .skill-icon {
             font-size: 42px;
+
             margin-bottom: 12px;
         }
 
+
         .skill-card h2 {
             color: #b84f7a;
+
             margin-bottom: 10px;
+
             font-size: 22px;
         }
 
+
         .skill-card p {
             color: #805f6e;
+
             line-height: 1.7;
         }
+
 
         /* ================= PAGE NAVIGATION ================= */
 
@@ -269,18 +355,24 @@
             width: 100%;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             gap: 20px;
+
             margin-top: 35px;
         }
+
 
         .page-navigation a {
             flex: 1;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             min-height: 58px;
@@ -290,29 +382,37 @@
             background: rgba(255, 255, 255, 0.92);
 
             border: 2px solid #f2b8cf;
+
             border-radius: 20px;
 
             color: #b6537d;
+
             text-decoration: none;
 
             font-weight: bold;
+
             font-size: 17px;
 
             box-shadow:
-                0 8px 20px rgba(210, 105, 150, 0.12);
+                0 8px 20px
+                rgba(210, 105, 150, 0.12);
 
             transition: 0.3s;
         }
+
 
         .page-navigation a:hover {
             transform: translateY(-4px);
 
             background: #fff0f6;
+
             border-color: #e58aad;
 
             box-shadow:
-                0 14px 28px rgba(210, 105, 150, 0.23);
+                0 14px 28px
+                rgba(210, 105, 150, 0.23);
         }
+
 
         /* ================= FOOTER ================= */
 
@@ -322,16 +422,20 @@
             padding: 30px 20px;
 
             color: #b27b91;
+
             font-size: 14px;
         }
+
 
         footer::before {
             content: "🎀  ";
         }
 
+
         footer::after {
             content: "  🎀";
         }
+
 
         /* ================= ANIMATIONS ================= */
 
@@ -347,19 +451,23 @@
             }
         }
 
+
         @keyframes twinkle {
 
             0%,
             100% {
                 opacity: 0.4;
+
                 transform: scale(0.9);
             }
 
             50% {
                 opacity: 1;
+
                 transform: scale(1.15);
             }
         }
+
 
         /* ================= MOBILE ================= */
 
@@ -369,59 +477,75 @@
                 padding: 15px 5%;
             }
 
+
             .logo {
                 font-size: 21px;
             }
+
 
             .nav-links {
                 gap: 12px;
             }
 
+
             .nav-links a {
                 font-size: 13px;
             }
 
+
             .container {
                 width: 92%;
+
                 margin: 35px auto;
             }
+
 
             .card {
                 padding: 35px 20px;
             }
 
+
             .card::before {
                 right: 20px;
+
                 font-size: 38px;
             }
+
 
             .section-title h1 {
                 font-size: 32px;
             }
 
+
             .section-title p {
                 font-size: 15px;
             }
+
 
             .skills-grid {
                 grid-template-columns: 1fr;
             }
 
+
             .skill-card {
                 padding: 25px 20px;
             }
+
 
             .skill-card h2 {
                 font-size: 20px;
             }
 
+
             .skill-card p {
                 font-size: 15px;
             }
 
+
             .page-navigation {
                 flex-direction: column;
             }
+
 
             .page-navigation a {
                 width: 100%;
@@ -429,30 +553,38 @@
 
         }
 
+
         /* ================= SMALL MOBILE ================= */
 
         @media (max-width: 400px) {
 
             nav {
                 flex-direction: column;
+
                 gap: 10px;
             }
+
 
             .nav-links {
                 gap: 18px;
             }
 
+
             .section-title h1 {
                 font-size: 27px;
             }
 
+
             body::before {
                 left: 10px;
+
                 font-size: 35px;
             }
 
+
             body::after {
                 right: 10px;
+
                 font-size: 20px;
             }
 
@@ -462,7 +594,9 @@
 
 </head>
 
+
 <body>
+
 
     <!-- ================= NAVBAR ================= -->
 
@@ -472,11 +606,13 @@
             Tanitta.
         </div>
 
+
         <div class="nav-links">
 
             <a href="index.html">
                 Home
             </a>
+
 
             <a href="portfolio.html">
                 Portfolio
@@ -499,9 +635,11 @@
                     05.
                 </span>
 
+
                 <h1>
                     ทักษะและความสามารถ
                 </h1>
+
 
                 <p>
                     Skills
@@ -512,7 +650,8 @@
 
             <div class="skills-grid">
 
-                <!-- ทักษะด้านวิทยาศาสตร์ -->
+
+                <!-- วิทยาศาสตร์ -->
 
                 <div class="skill-card">
 
@@ -520,9 +659,11 @@
                         🧪
                     </div>
 
+
                     <h2>
                         วิทยาศาสตร์และการทดลอง
                     </h2>
+
 
                     <p>
                         มีความสนใจด้านวิทยาศาสตร์
@@ -541,9 +682,11 @@
                         🧠
                     </div>
 
+
                     <h2>
                         การคิดวิเคราะห์และแก้ปัญหา
                     </h2>
+
 
                     <p>
                         สามารถคิดวิเคราะห์ปัญหาอย่างเป็นขั้นตอน
@@ -554,7 +697,7 @@
                 </div>
 
 
-                <!-- ความสนใจด้านกายภาพบำบัด -->
+                <!-- กายภาพบำบัด -->
 
                 <div class="skill-card">
 
@@ -562,9 +705,11 @@
                         🩺
                     </div>
 
+
                     <h2>
                         ความสนใจด้านกายภาพบำบัด
                     </h2>
+
 
                     <p>
                         สนใจการดูแลและฟื้นฟูร่างกาย
@@ -583,9 +728,11 @@
                         🤝
                     </div>
 
+
                     <h2>
                         การทำงานร่วมกับผู้อื่น
                     </h2>
+
 
                     <p>
                         สามารถทำงานร่วมกับผู้อื่นได้ดี
@@ -604,9 +751,14 @@
 
         <div class="page-navigation">
 
-            <a href="projects.html">
+            <!-- ชื่อไฟล์จริงคือ project.html -->
+
+            <a href="project.html">
                 ← Projects
             </a>
+
+
+            <!-- ชื่อไฟล์จริงคือ contact.html -->
 
             <a href="contact.html">
                 ติดต่อ →
@@ -628,6 +780,7 @@
         &copy; 2026 Thanwarath
 
     </footer>
+
 
 </body>
 
