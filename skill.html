@@ -272,6 +272,39 @@
         }
 
 
+        /* ===== Highlight ===== */
+
+        .highlight-box {
+            margin-top: 30px;
+
+            padding: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffeaf3,
+                    #fff7fa
+                );
+
+            border: 2px solid #f2bfd4;
+            border-radius: 22px;
+
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            color: #b84f7a;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box p {
+            color: #805f6e;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+
         /* ===== Project ===== */
 
         .project-box {
@@ -328,7 +361,7 @@
         }
 
 
-        /* ===== Certificate ===== */
+        /* ===== Achievement ===== */
 
         .certificate-box {
             margin-top: 30px;
@@ -338,28 +371,113 @@
         .certificate-box h2 {
             color: #b84f7a;
             font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .certificate-box p {
-            color: #805f6e;
             margin-bottom: 20px;
         }
 
-        .certificate {
-            display: block;
+        .certificate-content {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff7fa,
+                    #ffe8f2
+                );
 
-            width: 100%;
-            max-width: 800px;
+            border: 2px solid #f2bfd4;
+            border-radius: 25px;
 
-            margin: 0 auto;
+            padding: 30px;
+
+            box-shadow:
+                0 10px 25px rgba(210, 105, 150, 0.10);
+
+            transition: 0.3s;
+        }
+
+        .certificate-content:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 30px
+                rgba(210, 105, 150, 0.18);
+        }
+
+        .certificate-icon {
+            font-size: 50px;
+            margin-bottom: 12px;
+        }
+
+        .certificate-content h3 {
+            color: #b84f7a;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .certificate-content p {
+            color: #805f6e;
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .certificate-main {
+            font-size: 17px !important;
+        }
+
+        .certificate-info {
+            background: rgba(255, 255, 255, 0.75);
 
             border-radius: 18px;
 
-            border: 2px solid #f2bfd4;
+            padding: 18px;
 
-            box-shadow:
-                0 12px 30px rgba(210, 105, 150, 0.18);
+            margin-top: 20px;
+
+            text-align: left;
+        }
+
+        .certificate-info p {
+            margin-bottom: 5px;
+        }
+
+
+        /* ===== Learning ===== */
+
+        .learning-box {
+            margin-top: 22px;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .learning-item {
+            background: #fff7fa;
+
+            border: 1px solid #f2bfd4;
+
+            border-radius: 18px;
+
+            padding: 20px;
+
+            text-align: left;
+        }
+
+        .learning-item h3 {
+            color: #b84f7a;
+
+            font-size: 18px;
+
+            margin-bottom: 8px;
+        }
+
+        .learning-item p {
+            color: #805f6e;
+
+            line-height: 1.7;
+
+            font-size: 15px;
         }
 
 
@@ -526,6 +644,22 @@
 
             .project-box p {
                 font-size: 15px;
+            }
+
+            .certificate-content {
+                padding: 25px 20px;
+            }
+
+            .certificate-content h3 {
+                font-size: 20px;
+            }
+
+            .certificate-content p {
+                font-size: 15px;
+            }
+
+            .learning-box {
+                grid-template-columns: 1fr;
             }
 
             .page-navigation {
@@ -702,6 +836,24 @@
 
             </div>
 
+
+            <!-- ===== Highlight ===== -->
+
+            <div class="highlight-box">
+
+                <h2>
+                    ✨ จุดเด่นที่ฉันอยากพัฒนา
+                </h2>
+
+                <p>
+                    ฉันเป็นคนที่ชอบเรียนรู้จากการลงมือทำ
+                    สนใจการทดลองและการค้นหาคำตอบด้วยตนเอง
+                    พร้อมเปิดรับประสบการณ์ใหม่ ๆ
+                    และนำสิ่งที่เรียนรู้มาพัฒนาตนเองอย่างต่อเนื่อง
+                </p>
+
+            </div>
+
         </section>
 
 
@@ -771,25 +923,103 @@
 
 
 
-            <!-- ===== Certificate ===== -->
+            <!-- ===== Achievement ===== -->
 
             <div class="certificate-box">
 
                 <h2>
-                    🏆 เกียรติบัตร
+                    🏆 ผลงานและการแข่งขัน
                 </h2>
 
-                <p>
-                    เกียรติบัตรการเข้าร่วมการแข่งขัน
-                    Multi Skills Competition
-                </p>
+
+                <div class="certificate-content">
+
+                    <div class="certificate-icon">
+                        🏆
+                    </div>
 
 
-                <img
-                    src="IMG_1090(1).jpeg"
-                    alt="เกียรติบัตรโครงงานน้ำหมักชีวภาพจากเปลือกผลไม้"
-                    class="certificate"
-                >
+                    <h3>
+                        การแข่งขัน Multi Skills Competition
+                    </h3>
+
+
+                    <p class="certificate-main">
+                        เข้าร่วมการแข่งขัน
+                        <strong>Multi Skills Competition</strong>
+                        ประเภทสามัญระดับชั้น ม.1–ม.3
+                    </p>
+
+
+                    <p>
+                        การแข่งขันทักษะวิชาการและการประกวด
+                        สิ่งประดิษฐ์นักเรียนโรงเรียนเอกชน
+                        จังหวัดอุดรธานี
+                    </p>
+
+
+                    <div class="certificate-info">
+
+                        <p>
+                            <strong>ครั้งที่:</strong>
+                            7
+                        </p>
+
+                        <p>
+                            <strong>ปีการศึกษา:</strong>
+                            2565
+                        </p>
+
+                        <p>
+                            <strong>ระดับชั้น:</strong>
+                            ม.1–ม.3
+                        </p>
+
+                        <p>
+                            <strong>ประเภทการแข่งขัน:</strong>
+                            Multi Skills Competition
+                        </p>
+
+                    </div>
+
+
+                    <!-- ===== Learning ===== -->
+
+                    <div class="learning-box">
+
+                        <div class="learning-item">
+
+                            <h3>
+                                🧠 สิ่งที่ได้เรียนรู้
+                            </h3>
+
+                            <p>
+                                ได้ฝึกการคิดและแก้ไขปัญหา
+                                ฝึกความรอบคอบ และเรียนรู้
+                                การเตรียมตัวก่อนเข้าร่วมการแข่งขัน
+                            </p>
+
+                        </div>
+
+
+                        <div class="learning-item">
+
+                            <h3>
+                                🌱 สิ่งที่นำไปพัฒนาต่อ
+                            </h3>
+
+                            <p>
+                                นำประสบการณ์จากการแข่งขัน
+                                มาพัฒนาความมั่นใจ การเรียนรู้
+                                และการทำงานร่วมกับผู้อื่น
+                                เพื่อใช้กับกิจกรรมในอนาคต
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
