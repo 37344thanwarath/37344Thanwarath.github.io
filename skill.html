@@ -73,6 +73,9 @@
             pointer-events: none;
         }
 
+
+        /* ===== Navigation ===== */
+
         nav {
             position: sticky;
             top: 0;
@@ -124,11 +127,17 @@
             transform: translateY(-2px);
         }
 
+
+        /* ===== Container ===== */
+
         .container {
             width: 90%;
             max-width: 1000px;
             margin: 55px auto;
         }
+
+
+        /* ===== Card ===== */
 
         .card {
             background: rgba(255, 255, 255, 0.92);
@@ -155,6 +164,9 @@
             font-size: 48px;
             transform: rotate(10deg);
         }
+
+
+        /* ===== Section Title ===== */
 
         .section-title {
             text-align: center;
@@ -191,6 +203,9 @@
             color: #c47a99;
             font-size: 17px;
         }
+
+
+        /* ===== Skills ===== */
 
         .skills-grid {
             display: grid;
@@ -256,11 +271,105 @@
             line-height: 1.7;
         }
 
+
+        /* ===== Project ===== */
+
+        .project-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff7fa,
+                    #ffe8f2
+                );
+
+            border: 2px solid #f2bfd4;
+            border-radius: 25px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 25px rgba(210, 105, 150, 0.10);
+        }
+
+        .project-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .project-box h2 {
+            color: #b84f7a;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .project-box p {
+            color: #805f6e;
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .project-info {
+            background: rgba(255,255,255,0.75);
+
+            border-radius: 18px;
+
+            padding: 18px;
+
+            margin-top: 20px;
+
+            text-align: left;
+        }
+
+        .project-info p {
+            margin-bottom: 5px;
+        }
+
+
+        /* ===== Certificate ===== */
+
+        .certificate-box {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .certificate-box h2 {
+            color: #b84f7a;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .certificate-box p {
+            color: #805f6e;
+            margin-bottom: 20px;
+        }
+
+        .certificate {
+            display: block;
+
+            width: 100%;
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            border-radius: 18px;
+
+            border: 2px solid #f2bfd4;
+
+            box-shadow:
+                0 12px 30px rgba(210, 105, 150, 0.18);
+        }
+
+
+        /* ===== Page Navigation ===== */
+
         .page-navigation {
             width: 100%;
 
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
 
             gap: 20px;
@@ -268,15 +377,13 @@
         }
 
         .page-navigation a {
-            flex: 1;
-
             display: flex;
             justify-content: center;
             align-items: center;
 
             min-height: 58px;
 
-            padding: 15px 25px;
+            padding: 15px 35px;
 
             background: rgba(255, 255, 255, 0.92);
 
@@ -305,6 +412,9 @@
                 0 14px 28px rgba(210, 105, 150, 0.23);
         }
 
+
+        /* ===== Footer ===== */
+
         footer {
             text-align: center;
 
@@ -321,6 +431,9 @@
         footer::after {
             content: "  🎀";
         }
+
+
+        /* ===== Animation ===== */
 
         @keyframes float {
 
@@ -347,6 +460,9 @@
                 transform: scale(1.15);
             }
         }
+
+
+        /* ===== Mobile ===== */
 
         @media (max-width: 700px) {
 
@@ -404,6 +520,14 @@
                 font-size: 15px;
             }
 
+            .project-box h2 {
+                font-size: 21px;
+            }
+
+            .project-box p {
+                font-size: 15px;
+            }
+
             .page-navigation {
                 flex-direction: column;
             }
@@ -412,6 +536,7 @@
                 width: 100%;
             }
         }
+
 
         @media (max-width: 400px) {
 
@@ -443,12 +568,16 @@
 
 </head>
 
+
 <body>
+
+
+    <!-- ===== Navigation ===== -->
 
     <nav>
 
         <div class="logo">
-            Tanitta.
+            Thanwarath.
         </div>
 
         <div class="nav-links">
@@ -465,7 +594,13 @@
 
     </nav>
 
+
+    <!-- ===== Main Content ===== -->
+
     <main class="container">
+
+
+        <!-- ===== Skills Section ===== -->
 
         <section class="card">
 
@@ -485,7 +620,9 @@
 
             </div>
 
+
             <div class="skills-grid">
+
 
                 <div class="skill-card">
 
@@ -505,6 +642,7 @@
 
                 </div>
 
+
                 <div class="skill-card">
 
                     <div class="skill-icon">
@@ -522,6 +660,7 @@
                     </p>
 
                 </div>
+
 
                 <div class="skill-card">
 
@@ -541,6 +680,7 @@
 
                 </div>
 
+
                 <div class="skill-card">
 
                     <div class="skill-icon">
@@ -559,23 +699,124 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
+
+
+        <!-- ===== Project Section ===== -->
+
+        <section class="card">
+
+            <div class="section-title">
+
+                <span class="number">
+                    06.
+                </span>
+
+                <h1>
+                    โครงงานที่ภาคภูมิใจ
+                </h1>
+
+                <p>
+                    Project
+                </p>
+
+            </div>
+
+
+            <div class="project-box">
+
+                <div class="project-icon">
+                    🍊🧪
+                </div>
+
+
+                <h2>
+                    โครงงานน้ำหมักชีวภาพจากเปลือกผลไม้
+                </h2>
+
+
+                <p>
+                    โครงงานที่นำเปลือกผลไม้มาใช้ให้เกิดประโยชน์
+                    โดยนำมาผลิตเป็นน้ำหมักชีวภาพ
+                    เพื่อเป็นแนวทางในการลดปริมาณขยะอินทรีย์
+                    และส่งเสริมการนำวัสดุเหลือใช้กลับมาใช้ประโยชน์
+                </p>
+
+
+                <div class="project-info">
+
+                    <p>
+                        <strong>ประเภทโครงงาน:</strong>
+                        โครงงานวิทยาศาสตร์
+                    </p>
+
+                    <p>
+                        <strong>หัวข้อ:</strong>
+                        น้ำหมักชีวภาพจากเปลือกผลไม้
+                    </p>
+
+                    <p>
+                        <strong>ทักษะที่ได้รับ:</strong>
+                        การทดลอง การสังเกต การวิเคราะห์
+                        และการทำงานร่วมกับผู้อื่น
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ===== Certificate ===== -->
+
+            <div class="certificate-box">
+
+                <h2>
+                    🏆 เกียรติบัตร
+                </h2>
+
+                <p>
+                    เกียรติบัตรการเข้าร่วมการแข่งขัน
+                    Multi Skills Competition
+                </p>
+
+
+                <img
+                    src="IMG_1090(1).jpeg"
+                    alt="เกียรติบัตรโครงงานน้ำหมักชีวภาพจากเปลือกผลไม้"
+                    class="certificate"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===== Page Navigation ===== -->
+
         <div class="page-navigation">
 
-            <a href="./project.html">
-                ← Projects
+            <a href="./portfolio.html">
+                ← Portfolio
             </a>
 
-            <a href="./contact.html">
-                ติดต่อ →
+            <a href="./index.html">
+                🏠 หน้าหลัก
             </a>
 
         </div>
 
+
     </main>
+
+
+
+    <!-- ===== Footer ===== -->
 
     <footer>
 
@@ -586,6 +827,7 @@
         &copy; 2026 Thanwarath
 
     </footer>
+
 
 </body>
 
