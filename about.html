@@ -141,7 +141,7 @@
         border: 2px solid #f3b6cf;
         border-radius: 28px;
 
-        padding: 35px;
+        padding: 40px 35px;
 
         text-align: center;
 
@@ -166,128 +166,11 @@
         opacity: 0.7;
     }
 
-    .profile-wrap {
-        position: relative;
-
-        width: 150px;
-        height: 150px;
-
-        margin: 0 auto 25px;
-    }
-
-    .profile {
-        width: 150px;
-        height: 150px;
-
-        object-fit: cover;
-
-        border-radius: 50%;
-        border: 5px solid white;
-
-        box-shadow:
-            0 10px 25px
-            rgba(220, 120, 160, 0.30);
-
-        animation:
-            profileFloat
-            4s ease-in-out infinite;
-
-        position: relative;
-        z-index: 2;
-    }
-
-    .profile-wrap::before {
-        content: "";
-
-        position: absolute;
-
-        width: 170px;
-        height: 170px;
-
-        border: 2px dashed #f1a5c4;
-        border-radius: 50%;
-
-        top: -10px;
-        left: -10px;
-
-        animation:
-            spin
-            12s linear infinite;
-    }
-
-    .profile-wrap::after {
-        content: "";
-
-        position: absolute;
-
-        width: 160px;
-        height: 160px;
-
-        border-radius: 50%;
-
-        background:
-            rgba(255, 182, 210, 0.25);
-
-        filter: blur(12px);
-
-        top: -5px;
-        left: -5px;
-
-        animation:
-            glow
-            3s ease-in-out infinite;
-
-        z-index: 0;
-    }
-
-    .deco {
-        position: absolute;
-
-        z-index: 3;
-
-        color: #e58aae;
-
-        font-size: 20px;
-
-        animation:
-            twinkle
-            2s ease-in-out infinite;
-    }
-
-    .heart-one {
-        top: 5px;
-        left: -15px;
-    }
-
-    .heart-two {
-        bottom: 10px;
-        right: -15px;
-
-        color: #f2a8c5;
-
-        animation-delay: 0.7s;
-    }
-
-    .star-one {
-        top: -15px;
-        right: 15px;
-
-        animation-delay: 1s;
-    }
-
-    .star-two {
-        bottom: 15px;
-        left: -10px;
-
-        color: #efa0c0;
-
-        animation-delay: 1.4s;
-    }
-
     .profile-card h2 {
         color: #693f54;
         font-size: 27px;
         margin-bottom: 15px;
+        margin-top: 10px;
     }
 
     .profile-card p {
@@ -333,6 +216,80 @@
 
     .info-box p {
         color: #806674;
+    }
+
+    /* ===== University Dream ===== */
+
+    .university-box {
+        background:
+            linear-gradient(
+                135deg,
+                rgba(255, 190, 215, 0.50),
+                rgba(255, 235, 243, 0.85)
+            );
+
+        border: 2px solid #f2b5cd;
+        border-radius: 24px;
+
+        padding: 30px;
+
+        margin-bottom: 25px;
+
+        text-align: center;
+
+        box-shadow:
+            0 10px 30px
+            rgba(220, 120, 160, 0.13);
+
+        transition: 0.3s;
+    }
+
+    .university-box:hover {
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 14px 30px
+            rgba(220, 120, 160, 0.20);
+    }
+
+    .university-icon {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    .university-box h2 {
+        color: #d96899;
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .university-box h3 {
+        color: #b95782;
+        font-size: 21px;
+        margin-bottom: 8px;
+    }
+
+    .university-box p {
+        color: #806674;
+        margin-bottom: 8px;
+    }
+
+    .dream-label {
+        display: inline-block;
+
+        margin-top: 15px;
+
+        padding: 7px 18px;
+
+        background: #ffd8e7;
+
+        border: 1px solid #f1aac5;
+
+        border-radius: 50px;
+
+        color: #c85e8d;
+
+        font-weight: bold;
     }
 
     /* ===== Interest Cards ===== */
@@ -481,7 +438,7 @@
 
         display: flex;
 
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
 
         gap: 20px;
@@ -490,8 +447,7 @@
     }
 
     .page-navigation a {
-        flex: 1;
-
+        width: 100%;
         max-width: 300px;
 
         padding: 16px 24px;
@@ -563,59 +519,6 @@
         margin-bottom: 8px;
     }
 
-    /* ===== Animation ===== */
-
-    @keyframes profileFloat {
-
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-7px);
-        }
-    }
-
-    @keyframes spin {
-
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    @keyframes glow {
-
-        0%,
-        100% {
-            opacity: 0.5;
-            transform: scale(1);
-        }
-
-        50% {
-            opacity: 0.9;
-            transform: scale(1.08);
-        }
-    }
-
-    @keyframes twinkle {
-
-        0%,
-        100% {
-            opacity: 0.4;
-            transform: scale(0.9);
-        }
-
-        50% {
-            opacity: 1;
-            transform: scale(1.2);
-        }
-    }
-
     /* ===== Mobile ===== */
 
     @media (max-width: 600px) {
@@ -637,7 +540,7 @@
         }
 
         .profile-card {
-            padding: 30px 20px;
+            padding: 35px 20px;
         }
 
         .interest-grid {
@@ -651,6 +554,18 @@
         .page-navigation a {
             max-width: 100%;
             width: 100%;
+        }
+
+        .university-box {
+            padding: 25px 20px;
+        }
+
+        .university-box h2 {
+            font-size: 22px;
+        }
+
+        .university-box h3 {
+            font-size: 19px;
         }
     }
 </style>
@@ -666,7 +581,6 @@
 
     <div>
         <a href="#about">เกี่ยวกับฉัน</a>
-        <a href="#interest">ความสนใจ</a>
         <a href="#goal">เป้าหมาย</a>
     </div>
 
@@ -689,22 +603,6 @@
     <!-- ===== Profile ===== -->
 
     <div class="profile-card" id="about">
-
-        <div class="profile-wrap">
-
-            <span class="deco heart-one">♡</span>
-            <span class="deco heart-two">♡</span>
-            <span class="deco star-one">✦</span>
-            <span class="deco star-two">✦</span>
-
-            <img
-                class="profile"
-                alt="Thanwarath"
-                src="data:image/jpeg;base64,''' + b64 + r'''"
-            >
-
-        </div>
-
 
         <h2>ธัญวรัตม์</h2>
 
@@ -762,9 +660,40 @@
     </div>
 
 
+    <!-- ===== Dream University ===== -->
+
+    <div class="university-box">
+
+        <div class="university-icon">
+            🎓
+        </div>
+
+        <h2>
+            มหาวิทยาลัยและคณะในฝัน
+        </h2>
+
+        <h3>
+            มหาวิทยาลัยธรรมศาสตร์
+        </h3>
+
+        <p>
+            คณะสหเวชศาสตร์
+        </p>
+
+        <p>
+            สาขากายภาพบำบัด
+        </p>
+
+        <span class="dream-label">
+            ♡ มหาวิทยาลัยในฝัน ♡
+        </span>
+
+    </div>
+
+
     <!-- ===== Interests ===== -->
 
-    <div class="info-box" id="interest">
+    <div class="info-box">
 
         <h2>สิ่งที่ฉันสนใจ</h2>
 
@@ -847,16 +776,12 @@
     </div>
 
 
-    <!-- ===== Page Navigation ===== -->
+    <!-- ===== Back Home ===== -->
 
     <div class="page-navigation">
 
-        <a href="#about">
-            ♡ เกี่ยวกับฉัน
-        </a>
-
-        <a href="#interest">
-            ✦ ความสนใจ
+        <a href="./index.html">
+            ♡ กลับหน้า Home
         </a>
 
     </div>
