@@ -52,7 +52,7 @@
         }
 
 
-        /* Navigation */
+        /* ================= NAVIGATION ================= */
 
         nav {
             position: sticky;
@@ -72,6 +72,8 @@
             background: rgba(255, 255, 255, 0.92);
 
             backdrop-filter: blur(12px);
+
+            -webkit-backdrop-filter: blur(12px);
 
             border-bottom: 2px solid #f5b4ce;
 
@@ -108,7 +110,7 @@
         }
 
 
-        /* Main */
+        /* ================= MAIN ================= */
 
         .container {
             max-width: 900px;
@@ -119,7 +121,7 @@
         }
 
 
-        /* Title */
+        /* ================= TITLE ================= */
 
         .section-title {
             display: flex;
@@ -171,7 +173,7 @@
         }
 
 
-        /* Content */
+        /* ================= CONTENT ================= */
 
         .about {
             background:
@@ -203,7 +205,7 @@
         }
 
 
-        /* Page Navigation */
+        /* ================= PAGE NAVIGATION ================= */
 
         .page-navigation {
             display: flex;
@@ -264,7 +266,7 @@
         }
 
 
-        /* Footer */
+        /* ================= FOOTER ================= */
 
         footer {
             text-align: center;
@@ -281,7 +283,7 @@
         }
 
 
-        /* Mobile */
+        /* ================= MOBILE ================= */
 
         @media (max-width: 600px) {
 
@@ -346,7 +348,7 @@
 <body>
 
 
-    <!-- Navigation -->
+    <!-- ================= NAVIGATION ================= -->
 
     <nav>
 
@@ -361,13 +363,17 @@
                 Home
             </a>
 
-            <a href="preface.html">
+
+            <!-- ชื่อไฟล์จริงของคำนำ -->
+            <a href="introduction.html">
                 คำนำ
             </a>
+
 
             <a href="about.html">
                 About Me
             </a>
+
 
             <a href="portfolio.html">
                 Portfolio
@@ -378,7 +384,7 @@
     </nav>
 
 
-    <!-- Main Content -->
+    <!-- ================= MAIN CONTENT ================= -->
 
     <main class="container">
 
@@ -389,9 +395,11 @@
                 01.
             </span>
 
+
             <h1>
                 คำนำ
             </h1>
+
 
             <div class="section-line"></div>
 
@@ -399,6 +407,7 @@
 
 
         <div class="about">
+
 
             <p>
                 แฟ้มสะสมผลงาน (Portfolio) เล่มนี้จัดทำขึ้นเพื่อรวบรวม
@@ -423,15 +432,20 @@
             </p>
 
 
+            <!-- ================= PAGE NAVIGATION ================= -->
+
             <div class="page-navigation">
+
 
                 <a href="index.html">
                     ← Home
                 </a>
 
+
                 <a href="about.html">
                     About Me →
                 </a>
+
 
             </div>
 
@@ -440,14 +454,15 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <p>
-            Designed & Built by
+            Designed &amp; Built by
             <strong>Thanwarath</strong>
         </p>
+
 
         <p>
             © 2026 Thanwarath
