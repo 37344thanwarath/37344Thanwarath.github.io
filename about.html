@@ -69,7 +69,6 @@ body {
 /* ===== Navigation ===== */
 
 nav {
-
     position: sticky;
 
     top: 0;
@@ -97,7 +96,6 @@ nav {
 
 
 .logo {
-
     font-size: 22px;
 
     font-weight: bold;
@@ -107,13 +105,11 @@ nav {
 
 
 .logo::before {
-
     content: "♡ ";
 }
 
 
 nav a {
-
     color: #d96f9f;
 
     text-decoration: none;
@@ -127,7 +123,6 @@ nav a {
 
 
 nav a:hover {
-
     color: #c94f84;
 }
 
@@ -135,7 +130,6 @@ nav a:hover {
 /* ===== Main Content ===== */
 
 .container {
-
     max-width: 900px;
 
     margin: auto;
@@ -145,7 +139,6 @@ nav a:hover {
 
 
 .section-title {
-
     display: flex;
 
     align-items: center;
@@ -157,7 +150,6 @@ nav a:hover {
 
 
 .section-number {
-
     color: #e17ba8;
 
     font-family: monospace;
@@ -167,7 +159,6 @@ nav a:hover {
 
 
 h1 {
-
     font-size: 36px;
 
     color: #693f54;
@@ -175,7 +166,6 @@ h1 {
 
 
 .section-line {
-
     height: 3px;
 
     flex: 1;
@@ -195,7 +185,6 @@ h1 {
 /* ===== Profile ===== */
 
 .profile-card {
-
     position: relative;
 
     overflow: hidden;
@@ -220,7 +209,6 @@ h1 {
 
 
 .profile-card::before {
-
     content: "♡  ✦  ♡  ✦  ♡";
 
     position: absolute;
@@ -241,20 +229,43 @@ h1 {
 }
 
 
-.profile-card h2 {
+/* ===== Profile Image ===== */
 
+.profile-image {
+    width: 160px;
+
+    height: 160px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #f3b6cf;
+
+    box-shadow:
+        0 10px 28px
+        rgba(220, 120, 160, 0.20);
+
+    margin: 15px auto 20px;
+
+    display: block;
+
+    background: #fff0f6;
+}
+
+
+.profile-card h2 {
     color: #693f54;
 
     font-size: 27px;
 
     margin-bottom: 15px;
 
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 
 .profile-card p {
-
     color: #806674;
 }
 
@@ -262,7 +273,6 @@ h1 {
 /* ===== Info Section ===== */
 
 .info-box {
-
     background:
         rgba(255, 255, 255, 0.90);
 
@@ -283,7 +293,6 @@ h1 {
 
 
 .info-box:hover {
-
     transform: translateY(-3px);
 
     box-shadow:
@@ -293,7 +302,6 @@ h1 {
 
 
 .info-box h2 {
-
     color: #df719f;
 
     font-size: 23px;
@@ -303,7 +311,6 @@ h1 {
 
 
 .info-box h2::before {
-
     content: "♡ ";
 
     color: #f0a2bf;
@@ -311,15 +318,58 @@ h1 {
 
 
 .info-box p {
+    color: #806674;
+}
+
+
+/* ===== Personal Information ===== */
+
+.personal-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+.personal-item {
+    background:
+        rgba(255, 240, 247, 0.75);
+
+    border: 1.5px solid #f3c4d8;
+
+    border-radius: 15px;
+
+    padding: 13px 18px;
 
     color: #806674;
+
+    transition: 0.3s;
+}
+
+
+.personal-item:hover {
+    transform: translateX(5px);
+
+    border-color: #e996b8;
+
+    box-shadow:
+        0 6px 18px
+        rgba(220, 120, 160, 0.12);
+}
+
+
+.personal-item strong {
+    color: #b95782;
 }
 
 
 /* ===== Education ===== */
 
 .university-box {
-
     background:
         linear-gradient(
             135deg,
@@ -346,7 +396,6 @@ h1 {
 
 
 .university-box:hover {
-
     transform: translateY(-3px);
 
     box-shadow:
@@ -356,7 +405,6 @@ h1 {
 
 
 .university-icon {
-
     font-size: 45px;
 
     margin-bottom: 10px;
@@ -364,7 +412,6 @@ h1 {
 
 
 .university-box h2 {
-
     color: #d96899;
 
     font-size: 25px;
@@ -374,7 +421,6 @@ h1 {
 
 
 .education-list {
-
     display: flex;
 
     flex-direction: column;
@@ -388,7 +434,6 @@ h1 {
 
 
 .education-item {
-
     background:
         rgba(255, 255, 255, 0.78);
 
@@ -403,7 +448,6 @@ h1 {
 
 
 .education-item:hover {
-
     transform: translateX(5px);
 
     border-color: #e996b8;
@@ -415,7 +459,6 @@ h1 {
 
 
 .education-item h3 {
-
     color: #b95782;
 
     font-size: 18px;
@@ -425,7 +468,6 @@ h1 {
 
 
 .education-item p {
-
     color: #806674;
 
     margin: 0;
@@ -435,7 +477,6 @@ h1 {
 
 
 .dream-label {
-
     display: inline-block;
 
     margin-top: 20px;
@@ -457,7 +498,6 @@ h1 {
 /* ===== Interest Cards ===== */
 
 .interest-grid {
-
     display: grid;
 
     grid-template-columns:
@@ -470,7 +510,6 @@ h1 {
 
 
 .interest-card {
-
     background:
         rgba(255, 255, 255, 0.92);
 
@@ -487,7 +526,6 @@ h1 {
 
 
 .interest-card::after {
-
     content: "♡";
 
     position: absolute;
@@ -503,7 +541,6 @@ h1 {
 
 
 .interest-card:hover {
-
     transform:
         translateY(-5px)
         scale(1.01);
@@ -517,7 +554,6 @@ h1 {
 
 
 .interest-card h3 {
-
     color: #c85e8d;
 
     font-size: 18px;
@@ -527,7 +563,6 @@ h1 {
 
 
 .interest-card p {
-
     font-size: 14px;
 
     color: #806674;
@@ -537,7 +572,6 @@ h1 {
 /* ===== Goal ===== */
 
 .goal {
-
     text-align: center;
 
     background:
@@ -562,7 +596,6 @@ h1 {
 
 
 .goal h2 {
-
     color: #d96899;
 
     margin-bottom: 10px;
@@ -570,13 +603,11 @@ h1 {
 
 
 .goal h2::before {
-
     content: "🌷 ";
 }
 
 
 .goal p {
-
     color: #806674;
 }
 
@@ -584,7 +615,6 @@ h1 {
 /* ===== Quote ===== */
 
 .quote {
-
     text-align: center;
 
     color: #d96899;
@@ -602,7 +632,6 @@ h1 {
 
 
 .quote::before {
-
     content: "“";
 
     font-size: 45px;
@@ -618,7 +647,6 @@ h1 {
 
 
 .quote::after {
-
     content: "”";
 
     font-size: 45px;
@@ -636,7 +664,6 @@ h1 {
 /* ===== Page Navigation ===== */
 
 .page-navigation {
-
     width: 100%;
 
     display: flex;
@@ -652,7 +679,6 @@ h1 {
 
 
 .page-navigation a {
-
     width: 100%;
 
     max-width: 300px;
@@ -686,7 +712,6 @@ h1 {
 
 
 .page-navigation a:hover {
-
     transform: translateY(-4px);
 
     background: #ffffff;
@@ -704,7 +729,6 @@ h1 {
 /* ===== Footer ===== */
 
 footer {
-
     text-align: center;
 
     padding: 40px 20px;
@@ -721,7 +745,6 @@ footer {
 
 
 footer::before {
-
     content: "♡  ✿  ♡  ✿  ♡";
 
     display: block;
@@ -739,49 +762,47 @@ footer::before {
 @media (max-width: 600px) {
 
     nav {
-
         padding: 15px 20px;
     }
 
 
     nav div:last-child {
-
         display: none;
     }
 
 
     .container {
-
         padding: 50px 15px;
     }
 
 
     h1 {
-
         font-size: 28px;
     }
 
 
     .profile-card {
-
         padding: 35px 20px;
     }
 
 
-    .interest-grid {
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
 
+
+    .interest-grid {
         grid-template-columns: 1fr;
     }
 
 
     .page-navigation {
-
         flex-direction: column;
     }
 
 
     .page-navigation a {
-
         max-width: 100%;
 
         width: 100%;
@@ -789,19 +810,16 @@ footer::before {
 
 
     .university-box {
-
         padding: 25px 20px;
     }
 
 
     .university-box h2 {
-
         font-size: 22px;
     }
 
 
     .education-item h3 {
-
         font-size: 17px;
     }
 
@@ -871,9 +889,19 @@ footer::before {
         id="about"
     >
 
+        <!-- รูปโปรไฟล์ -->
+
+        <img
+            src="./profile.jpg"
+            alt="รูปโปรไฟล์ ธัญวรัตม์"
+            class="profile-image"
+        >
+
+
         <h2>
             ธัญวรัตม์
         </h2>
+
 
         <p>
 
@@ -891,31 +919,106 @@ footer::before {
     <div class="info-box">
 
         <h2>
-            รู้จักฉันให้มากขึ้น
+            แนะนำตัว
         </h2>
 
-        <p>
 
-            สวัสดีค่ะ! ฉันชื่อ
-            <b>ธัญวรัตม์</b>
+        <div class="personal-info">
 
-            เป็นคนที่ชอบเรียนรู้สิ่งใหม่ ๆ
-            และพยายามพัฒนาตัวเองอยู่เสมอ
 
-            ฉันเชื่อว่าทุกประสบการณ์ที่ได้พบเจอ
-            สามารถนำมาเป็นบทเรียนและช่วยให้เรา
-            เติบโตขึ้นได้
+            <div class="personal-item">
 
-        </p>
+                <strong>👤 ชื่อ - นามสกุล :</strong>
+                ธัญวรัตม์ วิการะโพธิ์
+
+            </div>
+
+
+            <div class="personal-item">
+
+                <strong>💗 ชื่อเล่น :</strong>
+                สตังค์
+
+            </div>
+
+
+            <div class="personal-item">
+
+                <strong>🎂 วัน/เดือน/ปีเกิด :</strong>
+                16 มิถุนายน 2551
+
+            </div>
+
+
+            <div class="personal-item">
+
+                <strong>✨ อายุ :</strong>
+                18 ปี
+
+            </div>
+
+
+            <div class="personal-item">
+
+                <strong>🎓 กำลังศึกษาอยู่ :</strong>
+                ชั้นมัธยมศึกษาปีที่ 6
+
+            </div>
+
+
+            <div class="personal-item">
+
+                <strong>🏫 โรงเรียน :</strong>
+                โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+
+            </div>
+
+
+            <div class="personal-item">
+
+                <strong>🏃 งานอดิเรก :</strong>
+                ออกกำลังกาย เล่นกีฬา ถ่ายภาพ
+                และค้นคว้าความรู้ใหม่ ๆ
+
+            </div>
+
+
+            <div class="personal-item">
+
+                <strong>🧠 ความสนใจ :</strong>
+                กายวิภาคศาสตร์ การทำงานของกล้ามเนื้อและข้อต่อ
+                การเคลื่อนไหวของร่างกาย
+                และการฟื้นฟูสมรรถภาพร่างกาย
+
+            </div>
+
+
+        </div>
+
 
         <br>
 
+
         <p>
 
-            Portfolio เว็บไซต์นี้จึงเป็นเหมือน
-            พื้นที่ที่ฉันใช้บอกเล่าเรื่องราวของตัวเอง
-            ทั้งสิ่งที่ชอบ สิ่งที่สนใจ กิจกรรมที่เคยทำ
-            รวมถึงเป้าหมายที่อยากไปให้ถึงในอนาคต ♡
+            ฉันเป็นคนที่ชอบเรียนรู้สิ่งใหม่ ๆ
+            และสนใจเกี่ยวกับการทำงานของร่างกาย
+            โดยเฉพาะการเคลื่อนไหวของกล้ามเนื้อและข้อต่อ
+            ซึ่งเป็นสิ่งที่ทำให้ฉันสนใจในศาสตร์ด้านกายภาพบำบัด
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            Portfolio เว็บไซต์นี้จึงเป็นพื้นที่ที่ฉันใช้
+            บอกเล่าเรื่องราว ตัวตน ความสนใจ
+            กิจกรรม และประสบการณ์ต่าง ๆ
+            ที่สะท้อนถึงความตั้งใจในการพัฒนาตัวเอง
+            และก้าวไปสู่เป้าหมายในอนาคต ♡
 
         </p>
 
@@ -1057,14 +1160,14 @@ footer::before {
             <div class="interest-card">
 
                 <h3>
-                    📚 การเรียนรู้
+                    🦴 กายวิภาคศาสตร์
                 </h3>
 
                 <p>
 
-                    ชอบค้นคว้าความรู้ใหม่ ๆ
-                    และพัฒนาความสามารถของตัวเอง
-                    อยู่เสมอ
+                    สนใจศึกษาโครงสร้างของร่างกาย
+                    รวมถึงกล้ามเนื้อ กระดูก และข้อต่อ
+                    เพื่อทำความเข้าใจการทำงานของร่างกาย
 
                 </p>
 
@@ -1074,13 +1177,14 @@ footer::before {
             <div class="interest-card">
 
                 <h3>
-                    🔬 วิทยาศาสตร์
+                    🏃 การเคลื่อนไหวของร่างกาย
                 </h3>
 
                 <p>
 
-                    สนใจวิทยาศาสตร์และการค้นหาคำตอบ
-                    ของสิ่งต่าง ๆ รอบตัว
+                    สนใจการเคลื่อนไหวของร่างกาย
+                    และปัจจัยที่ส่งผลต่อการเคลื่อนไหว
+                    รวมถึงการออกกำลังกายอย่างเหมาะสม
 
                 </p>
 
@@ -1090,13 +1194,31 @@ footer::before {
             <div class="interest-card">
 
                 <h3>
-                    ✨ ความคิดสร้างสรรค์
+                    💪 การออกกำลังกาย
                 </h3>
 
                 <p>
 
-                    ชอบออกแบบ คิดไอเดียใหม่ ๆ
-                    และสร้างผลงานที่สะท้อนความเป็นตัวเอง
+                    สนใจการออกกำลังกายเพื่อเสริมสร้าง
+                    ความแข็งแรงของกล้ามเนื้อ
+                    และดูแลสุขภาพร่างกาย
+
+                </p>
+
+            </div>
+
+
+            <div class="interest-card">
+
+                <h3>
+                    🩺 กายภาพบำบัด
+                </h3>
+
+                <p>
+
+                    สนใจการฟื้นฟูสมรรถภาพร่างกาย
+                    และการช่วยให้ผู้ที่มีปัญหาด้านการเคลื่อนไหว
+                    สามารถกลับมาใช้ชีวิตได้ดีขึ้น
 
                 </p>
 
@@ -1121,11 +1243,14 @@ footer::before {
 
         <p>
 
-            เป้าหมายของฉันคือการพัฒนาตัวเอง
-            ให้เป็นคนที่เก่งขึ้นและดีขึ้นในทุก ๆ วัน
+            เป้าหมายของฉันคือการศึกษาต่อ
+            ในด้านกายภาพบำบัด
+            และพัฒนาความรู้เกี่ยวกับร่างกาย
+            การเคลื่อนไหว และการฟื้นฟูสมรรถภาพ
 
-            ตั้งใจเรียน เก็บเกี่ยวประสบการณ์
-            และพยายามทำตามความฝันของตัวเองให้สำเร็จ
+            เพื่อที่จะนำความรู้ไปใช้ในการดูแล
+            และช่วยเหลือผู้ที่มีปัญหาด้านการเคลื่อนไหว
+            ให้สามารถกลับมาใช้ชีวิตประจำวันได้อย่างมีคุณภาพ
 
         </p>
 
@@ -1136,8 +1261,8 @@ footer::before {
             <b>
 
                 เพราะฉันเชื่อว่า...
-                ความฝันจะไม่ไกลเกินไป
-                ถ้าเราค่อย ๆ ก้าวไปข้างหน้า ♡
+                การเปลี่ยนแปลงเล็ก ๆ
+                สามารถสร้างความแตกต่างที่ยิ่งใหญ่ได้ ♡
 
             </b>
 
