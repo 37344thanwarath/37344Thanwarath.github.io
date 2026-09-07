@@ -1,577 +1,821 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
 <title>Thanwarath | เกี่ยวกับฉัน</title>
 
+
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
 
-    html {
-        scroll-behavior: smooth;
-    }
+/* ===== Reset ===== */
 
-    body {
-        font-family: Arial, sans-serif;
-        background:
-            radial-gradient(
-                circle at 15% 20%,
-                rgba(255, 190, 215, 0.65),
-                transparent 35%
-            ),
-            radial-gradient(
-                circle at 85% 75%,
-                rgba(255, 220, 235, 0.7),
-                transparent 35%
-            ),
-            radial-gradient(
-                circle at 50% 100%,
-                rgba(244, 170, 200, 0.25),
-                transparent 40%
-            ),
-            linear-gradient(
-                135deg,
-                #fff7fb,
-                #fff0f6
-            );
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        color: #6b4055;
-        line-height: 1.7;
-        min-height: 100vh;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    /* ===== Navigation ===== */
 
-    nav {
-        position: sticky;
-        top: 0;
-        z-index: 100;
+/* ===== Body ===== */
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+body {
+    font-family: Arial, sans-serif;
 
-        padding: 18px 8%;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 190, 215, 0.65),
+            transparent 35%
+        ),
 
-        background: rgba(255, 255, 255, 0.90);
-        backdrop-filter: blur(12px);
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(255, 220, 235, 0.7),
+            transparent 35%
+        ),
 
-        border-bottom: 1px solid #f3b6cf;
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(244, 170, 200, 0.25),
+            transparent 40%
+        ),
 
-        box-shadow:
-            0 5px 20px
-            rgba(220, 120, 160, 0.08);
-    }
+        linear-gradient(
+            135deg,
+            #fff7fb,
+            #fff0f6
+        );
 
-    .logo {
-        font-size: 22px;
-        font-weight: bold;
-        color: #e17ba8;
-    }
+    color: #6b4055;
 
-    .logo::before {
-        content: "♡ ";
-    }
+    line-height: 1.7;
 
-    nav a {
-        color: #d96f9f;
-        text-decoration: none;
-        margin-left: 20px;
-        transition: 0.3s;
-        font-weight: 500;
-    }
+    min-height: 100vh;
+}
 
-    nav a:hover {
-        color: #c94f84;
-    }
 
-    /* ===== Main Content ===== */
+/* ===== Navigation ===== */
 
-    .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 70px 20px;
-    }
+nav {
 
-    .section-title {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 30px;
-    }
+    position: sticky;
 
-    .section-number {
-        color: #e17ba8;
-        font-family: monospace;
-        font-weight: bold;
-    }
+    top: 0;
 
-    h1 {
-        font-size: 36px;
-        color: #693f54;
-    }
+    z-index: 100;
 
-    .section-line {
-        height: 3px;
-        flex: 1;
+    display: flex;
 
-        background: linear-gradient(
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #f3b6cf;
+
+    box-shadow:
+        0 5px 20px
+        rgba(220, 120, 160, 0.08);
+}
+
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #e17ba8;
+}
+
+
+.logo::before {
+
+    content: "♡ ";
+}
+
+
+nav a {
+
+    color: #d96f9f;
+
+    text-decoration: none;
+
+    margin-left: 20px;
+
+    transition: 0.3s;
+
+    font-weight: 500;
+}
+
+
+nav a:hover {
+
+    color: #c94f84;
+}
+
+
+/* ===== Main Content ===== */
+
+.container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 70px 20px;
+}
+
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.section-number {
+
+    color: #e17ba8;
+
+    font-family: monospace;
+
+    font-weight: bold;
+}
+
+
+h1 {
+
+    font-size: 36px;
+
+    color: #693f54;
+}
+
+
+.section-line {
+
+    height: 3px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
             90deg,
             #f6a9c8,
             #e17ba8,
             #ffd1e2
         );
 
-        border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+/* ===== Profile ===== */
+
+.profile-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        rgba(255, 255, 255, 0.90);
+
+    border: 2px solid #f3b6cf;
+
+    border-radius: 28px;
+
+    padding: 40px 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 35px
+        rgba(220, 120, 160, 0.15);
+
+    margin-bottom: 25px;
+}
+
+
+.profile-card::before {
+
+    content: "♡  ✦  ♡  ✦  ♡";
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 0;
+
+    right: 0;
+
+    color: #f4b1ca;
+
+    font-size: 18px;
+
+    letter-spacing: 12px;
+
+    opacity: 0.7;
+}
+
+
+.profile-card h2 {
+
+    color: #693f54;
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+
+    margin-top: 10px;
+}
+
+
+.profile-card p {
+
+    color: #806674;
+}
+
+
+/* ===== Info Section ===== */
+
+.info-box {
+
+    background:
+        rgba(255, 255, 255, 0.90);
+
+    border: 2px solid #f3bfd4;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(220, 120, 160, 0.12);
+
+    transition: 0.3s;
+}
+
+
+.info-box:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(220, 120, 160, 0.18);
+}
+
+
+.info-box h2 {
+
+    color: #df719f;
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+
+.info-box h2::before {
+
+    content: "♡ ";
+
+    color: #f0a2bf;
+}
+
+
+.info-box p {
+
+    color: #806674;
+}
+
+
+/* ===== Education ===== */
+
+.university-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 190, 215, 0.50),
+            rgba(255, 235, 243, 0.85)
+        );
+
+    border: 2px solid #f2b5cd;
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px
+        rgba(220, 120, 160, 0.13);
+
+    transition: 0.3s;
+}
+
+
+.university-box:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(220, 120, 160, 0.20);
+}
+
+
+.university-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.university-box h2 {
+
+    color: #d96899;
+
+    font-size: 25px;
+
+    margin-bottom: 18px;
+}
+
+
+.education-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin-top: 20px;
+
+    text-align: left;
+}
+
+
+.education-item {
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border: 1.5px solid #f3c4d8;
+
+    border-radius: 16px;
+
+    padding: 15px 20px;
+
+    transition: 0.3s;
+}
+
+
+.education-item:hover {
+
+    transform: translateX(5px);
+
+    border-color: #e996b8;
+
+    box-shadow:
+        0 8px 20px
+        rgba(220, 120, 160, 0.15);
+}
+
+
+.education-item h3 {
+
+    color: #b95782;
+
+    font-size: 18px;
+
+    margin-bottom: 3px;
+}
+
+
+.education-item p {
+
+    color: #806674;
+
+    margin: 0;
+
+    font-size: 16px;
+}
+
+
+.dream-label {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 7px 18px;
+
+    background: #ffd8e7;
+
+    border: 1px solid #f1aac5;
+
+    border-radius: 50px;
+
+    color: #c85e8d;
+
+    font-weight: bold;
+}
+
+
+/* ===== Interest Cards ===== */
+
+.interest-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+.interest-card {
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    border: 1.5px solid #f3c4d8;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    transition: 0.3s;
+
+    position: relative;
+}
+
+
+.interest-card::after {
+
+    content: "♡";
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 12px;
+
+    color: #f2abc7;
+
+    font-size: 20px;
+}
+
+
+.interest-card:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.01);
+
+    border-color: #e996b8;
+
+    box-shadow:
+        0 10px 25px
+        rgba(220, 120, 160, 0.18);
+}
+
+
+.interest-card h3 {
+
+    color: #c85e8d;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+
+.interest-card p {
+
+    font-size: 14px;
+
+    color: #806674;
+}
+
+
+/* ===== Goal ===== */
+
+.goal {
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 190, 215, 0.45),
+            rgba(255, 225, 237, 0.65)
+        );
+
+    border: 2px solid #f2b5cd;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    margin-bottom: 35px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(220, 120, 160, 0.10);
+}
+
+
+.goal h2 {
+
+    color: #d96899;
+
+    margin-bottom: 10px;
+}
+
+
+.goal h2::before {
+
+    content: "🌷 ";
+}
+
+
+.goal p {
+
+    color: #806674;
+}
+
+
+/* ===== Quote ===== */
+
+.quote {
+
+    text-align: center;
+
+    color: #d96899;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    position: relative;
+}
+
+
+.quote::before {
+
+    content: "“";
+
+    font-size: 45px;
+
+    color: #f1b0c9;
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 0;
+}
+
+
+.quote::after {
+
+    content: "”";
+
+    font-size: 45px;
+
+    color: #f1b0c9;
+
+    position: absolute;
+
+    right: 20px;
+
+    bottom: -15px;
+}
+
+
+/* ===== Page Navigation ===== */
+
+.page-navigation {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 35px;
+}
+
+
+.page-navigation a {
+
+    width: 100%;
+
+    max-width: 300px;
+
+    padding: 16px 24px;
+
+    background:
+        rgba(255, 255, 255, 0.90);
+
+    border: 2px solid #f3b6cf;
+
+    border-radius: 20px;
+
+    color: #c85e8d;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 20px
+        rgba(220, 120, 160, 0.12);
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.page-navigation a:hover {
+
+    transform: translateY(-4px);
+
+    background: #ffffff;
+
+    border-color: #e58bae;
+
+    color: #c34f82;
+
+    box-shadow:
+        0 12px 25px
+        rgba(220, 120, 160, 0.20);
+}
+
+
+/* ===== Footer ===== */
+
+footer {
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    border-top: 1px solid #f3b6cf;
+
+    color: #ad8999;
+
+    font-size: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.35);
+}
+
+
+footer::before {
+
+    content: "♡  ✿  ♡  ✿  ♡";
+
+    display: block;
+
+    color: #efa5c2;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+/* ===== Mobile ===== */
+
+@media (max-width: 600px) {
+
+    nav {
+
+        padding: 15px 20px;
     }
 
-    /* ===== Profile ===== */
+
+    nav div:last-child {
+
+        display: none;
+    }
+
+
+    .container {
+
+        padding: 50px 15px;
+    }
+
+
+    h1 {
+
+        font-size: 28px;
+    }
+
 
     .profile-card {
-        position: relative;
-        overflow: hidden;
 
-        background: rgba(255, 255, 255, 0.90);
-
-        border: 2px solid #f3b6cf;
-        border-radius: 28px;
-
-        padding: 40px 35px;
-
-        text-align: center;
-
-        box-shadow:
-            0 10px 35px
-            rgba(220, 120, 160, 0.15);
-
-        margin-bottom: 25px;
+        padding: 35px 20px;
     }
 
-    .profile-card::before {
-        content: "♡  ✦  ♡  ✦  ♡";
-
-        position: absolute;
-        top: 10px;
-        left: 0;
-        right: 0;
-
-        color: #f4b1ca;
-        font-size: 18px;
-        letter-spacing: 12px;
-        opacity: 0.7;
-    }
-
-    .profile-card h2 {
-        color: #693f54;
-        font-size: 27px;
-        margin-bottom: 15px;
-        margin-top: 10px;
-    }
-
-    .profile-card p {
-        color: #806674;
-    }
-
-    /* ===== Info Section ===== */
-
-    .info-box {
-        background: rgba(255, 255, 255, 0.90);
-
-        border: 2px solid #f3bfd4;
-        border-radius: 22px;
-
-        padding: 30px;
-        margin-bottom: 25px;
-
-        box-shadow:
-            0 10px 30px
-            rgba(220, 120, 160, 0.12);
-
-        transition: 0.3s;
-    }
-
-    .info-box:hover {
-        transform: translateY(-3px);
-
-        box-shadow:
-            0 12px 30px
-            rgba(220, 120, 160, 0.18);
-    }
-
-    .info-box h2 {
-        color: #df719f;
-        font-size: 23px;
-        margin-bottom: 15px;
-    }
-
-    .info-box h2::before {
-        content: "♡ ";
-        color: #f0a2bf;
-    }
-
-    .info-box p {
-        color: #806674;
-    }
-
-    /* ===== University Dream ===== */
-
-    .university-box {
-        background:
-            linear-gradient(
-                135deg,
-                rgba(255, 190, 215, 0.50),
-                rgba(255, 235, 243, 0.85)
-            );
-
-        border: 2px solid #f2b5cd;
-        border-radius: 24px;
-
-        padding: 30px;
-
-        margin-bottom: 25px;
-
-        text-align: center;
-
-        box-shadow:
-            0 10px 30px
-            rgba(220, 120, 160, 0.13);
-
-        transition: 0.3s;
-    }
-
-    .university-box:hover {
-        transform: translateY(-3px);
-
-        box-shadow:
-            0 14px 30px
-            rgba(220, 120, 160, 0.20);
-    }
-
-    .university-icon {
-        font-size: 45px;
-        margin-bottom: 10px;
-    }
-
-    .university-box h2 {
-        color: #d96899;
-        font-size: 25px;
-        margin-bottom: 18px;
-    }
-
-    .university-box h3 {
-        color: #b95782;
-        font-size: 21px;
-        margin-bottom: 8px;
-    }
-
-    .university-box p {
-        color: #806674;
-        margin-bottom: 8px;
-    }
-
-    .dream-label {
-        display: inline-block;
-
-        margin-top: 15px;
-
-        padding: 7px 18px;
-
-        background: #ffd8e7;
-
-        border: 1px solid #f1aac5;
-
-        border-radius: 50px;
-
-        color: #c85e8d;
-
-        font-weight: bold;
-    }
-
-    /* ===== Interest Cards ===== */
 
     .interest-grid {
-        display: grid;
 
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap: 15px;
-
-        margin-top: 20px;
+        grid-template-columns: 1fr;
     }
 
-    .interest-card {
-        background: rgba(255, 255, 255, 0.92);
-
-        border: 1.5px solid #f3c4d8;
-        border-radius: 18px;
-
-        padding: 20px;
-
-        transition: 0.3s;
-
-        position: relative;
-    }
-
-    .interest-card::after {
-        content: "♡";
-
-        position: absolute;
-
-        right: 15px;
-        top: 12px;
-
-        color: #f2abc7;
-        font-size: 20px;
-    }
-
-    .interest-card:hover {
-        transform:
-            translateY(-5px)
-            scale(1.01);
-
-        border-color: #e996b8;
-
-        box-shadow:
-            0 10px 25px
-            rgba(220, 120, 160, 0.18);
-    }
-
-    .interest-card h3 {
-        color: #c85e8d;
-        font-size: 18px;
-        margin-bottom: 5px;
-    }
-
-    .interest-card p {
-        font-size: 14px;
-        color: #806674;
-    }
-
-    /* ===== Goal ===== */
-
-    .goal {
-        text-align: center;
-
-        background:
-            linear-gradient(
-                135deg,
-                rgba(255, 190, 215, 0.45),
-                rgba(255, 225, 237, 0.65)
-            );
-
-        border: 2px solid #f2b5cd;
-        border-radius: 22px;
-
-        padding: 30px;
-        margin-bottom: 35px;
-
-        box-shadow:
-            0 10px 30px
-            rgba(220, 120, 160, 0.10);
-    }
-
-    .goal h2 {
-        color: #d96899;
-        margin-bottom: 10px;
-    }
-
-    .goal h2::before {
-        content: "🌷 ";
-    }
-
-    .goal p {
-        color: #806674;
-    }
-
-    /* ===== Quote ===== */
-
-    .quote {
-        text-align: center;
-
-        color: #d96899;
-
-        font-size: 18px;
-        font-weight: bold;
-
-        margin-top: 25px;
-        padding: 20px;
-
-        position: relative;
-    }
-
-    .quote::before {
-        content: "“";
-
-        font-size: 45px;
-
-        color: #f1b0c9;
-
-        position: absolute;
-
-        left: 20px;
-        top: 0;
-    }
-
-    .quote::after {
-        content: "”";
-
-        font-size: 45px;
-
-        color: #f1b0c9;
-
-        position: absolute;
-
-        right: 20px;
-        bottom: -15px;
-    }
-
-    /* ===== Page Navigation ===== */
 
     .page-navigation {
-        width: 100%;
 
-        display: flex;
-
-        justify-content: center;
-        align-items: center;
-
-        gap: 20px;
-
-        margin-top: 35px;
+        flex-direction: column;
     }
+
 
     .page-navigation a {
+
+        max-width: 100%;
+
         width: 100%;
-        max-width: 300px;
-
-        padding: 16px 24px;
-
-        background:
-            rgba(255, 255, 255, 0.90);
-
-        border: 2px solid #f3b6cf;
-
-        border-radius: 20px;
-
-        color: #c85e8d;
-
-        text-decoration: none;
-
-        font-size: 16px;
-        font-weight: bold;
-
-        text-align: center;
-
-        box-shadow:
-            0 8px 20px
-            rgba(220, 120, 160, 0.12);
-
-        transition:
-            all 0.3s ease;
     }
 
-    .page-navigation a:hover {
-        transform: translateY(-4px);
 
-        background: #ffffff;
+    .university-box {
 
-        border-color: #e58bae;
-
-        color: #c34f82;
-
-        box-shadow:
-            0 12px 25px
-            rgba(220, 120, 160, 0.20);
+        padding: 25px 20px;
     }
 
-    /* ===== Footer ===== */
 
-    footer {
-        text-align: center;
+    .university-box h2 {
 
-        padding: 40px 20px;
-
-        border-top: 1px solid #f3b6cf;
-
-        color: #ad8999;
-
-        font-size: 13px;
-
-        background:
-            rgba(255, 255, 255, 0.35);
+        font-size: 22px;
     }
 
-    footer::before {
-        content: "♡  ✿  ♡  ✿  ♡";
 
-        display: block;
+    .education-item h3 {
 
-        color: #efa5c2;
-
-        font-size: 18px;
-
-        margin-bottom: 8px;
+        font-size: 17px;
     }
 
-    /* ===== Mobile ===== */
+}
 
-    @media (max-width: 600px) {
-
-        nav {
-            padding: 15px 20px;
-        }
-
-        nav div:last-child {
-            display: none;
-        }
-
-        .container {
-            padding: 50px 15px;
-        }
-
-        h1 {
-            font-size: 28px;
-        }
-
-        .profile-card {
-            padding: 35px 20px;
-        }
-
-        .interest-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .page-navigation {
-            flex-direction: column;
-        }
-
-        .page-navigation a {
-            max-width: 100%;
-            width: 100%;
-        }
-
-        .university-box {
-            padding: 25px 20px;
-        }
-
-        .university-box h2 {
-            font-size: 22px;
-        }
-
-        .university-box h3 {
-            font-size: 19px;
-        }
-    }
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- ===== Navigation ===== -->
 
 <nav>
 
@@ -580,20 +824,40 @@
     </div>
 
     <div>
-        <a href="#about">เกี่ยวกับฉัน</a>
-        <a href="#goal">เป้าหมาย</a>
+
+        <a href="#about">
+            เกี่ยวกับฉัน
+        </a>
+
+        <a href="#education">
+            การศึกษา
+        </a>
+
+        <a href="#goal">
+            เป้าหมาย
+        </a>
+
     </div>
 
 </nav>
 
 
+<!-- ===== Main ===== -->
+
 <main class="container">
+
+
+    <!-- ===== Section Title ===== -->
 
     <div class="section-title">
 
-        <span class="section-number">01</span>
+        <span class="section-number">
+            01
+        </span>
 
-        <h1>เกี่ยวกับฉัน</h1>
+        <h1>
+            เกี่ยวกับฉัน
+        </h1>
 
         <div class="section-line"></div>
 
@@ -602,14 +866,21 @@
 
     <!-- ===== Profile ===== -->
 
-    <div class="profile-card" id="about">
+    <div
+        class="profile-card"
+        id="about"
+    >
 
-        <h2>ธัญวรัตม์</h2>
+        <h2>
+            ธัญวรัตม์
+        </h2>
 
         <p>
+
             ยินดีต้อนรับเข้าสู่พื้นที่เล็ก ๆ
             ที่รวบรวมเรื่องราว ตัวตน ความสนใจ
             และความฝันของฉันไว้ในที่เดียว
+
         </p>
 
     </div>
@@ -619,24 +890,33 @@
 
     <div class="info-box">
 
-        <h2>รู้จักฉันให้มากขึ้น</h2>
+        <h2>
+            รู้จักฉันให้มากขึ้น
+        </h2>
 
         <p>
-            สวัสดีค่ะ! ฉันชื่อ <b>ธัญวรัตม์</b>
+
+            สวัสดีค่ะ! ฉันชื่อ
+            <b>ธัญวรัตม์</b>
+
             เป็นคนที่ชอบเรียนรู้สิ่งใหม่ ๆ
             และพยายามพัฒนาตัวเองอยู่เสมอ
+
             ฉันเชื่อว่าทุกประสบการณ์ที่ได้พบเจอ
             สามารถนำมาเป็นบทเรียนและช่วยให้เรา
             เติบโตขึ้นได้
+
         </p>
 
         <br>
 
         <p>
+
             Portfolio เว็บไซต์นี้จึงเป็นเหมือน
             พื้นที่ที่ฉันใช้บอกเล่าเรื่องราวของตัวเอง
             ทั้งสิ่งที่ชอบ สิ่งที่สนใจ กิจกรรมที่เคยทำ
             รวมถึงเป้าหมายที่อยากไปให้ถึงในอนาคต ♡
+
         </p>
 
     </div>
@@ -646,46 +926,117 @@
 
     <div class="info-box">
 
-        <h2>ตัวตนของฉัน</h2>
+        <h2>
+            ตัวตนของฉัน
+        </h2>
 
         <p>
+
             ฉันเป็นคนที่ให้ความสำคัญกับการเรียนรู้
             และการพัฒนาตัวเอง ชอบลองทำสิ่งใหม่ ๆ
             และไม่กลัวที่จะเรียนรู้จากข้อผิดพลาด
+
             เพราะฉันคิดว่าความสำเร็จไม่ได้เกิดขึ้น
             จากความเก่งเพียงอย่างเดียว
             แต่เกิดจากความพยายามและการไม่ยอมแพ้
+
         </p>
 
     </div>
 
 
-    <!-- ===== Dream University ===== -->
+    <!-- ===== Education ===== -->
 
-    <div class="university-box">
+    <div
+        class="university-box"
+        id="education"
+    >
 
         <div class="university-icon">
             🎓
         </div>
 
         <h2>
-            มหาวิทยาลัยและคณะในฝัน
+            ประวัติการศึกษา
         </h2>
 
-        <h3>
-            มหาวิทยาลัยธรรมศาสตร์
-        </h3>
 
-        <p>
-            คณะสหเวชศาสตร์
-        </p>
+        <div class="education-list">
 
-        <p>
-            สาขากายภาพบำบัด
-        </p>
+
+            <div class="education-item">
+
+                <h3>
+                    ประถมศึกษาปีที่ 1–6
+                </h3>
+
+                <p>
+                    โรงเรียนมารีวิทย์บ่อวิน
+                </p>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <h3>
+                    มัธยมศึกษาปีที่ 1
+                </h3>
+
+                <p>
+                    โรงเรียนมารีวิทย์บ่อวิน
+                </p>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <h3>
+                    มัธยมศึกษาปีที่ 2
+                </h3>
+
+                <p>
+                    โรงเรียนศศิกานต์วิทยา
+                </p>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <h3>
+                    มัธยมศึกษาปีที่ 3
+                </h3>
+
+                <p>
+                    โรงเรียนหนองคายวิทยาคาร
+                </p>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <h3>
+                    มัธยมศึกษาปีที่ 4–6
+                </h3>
+
+                <p>
+                    โรงเรียนบ้านบึง
+                    "อุตสาหกรรมนุเคราะห์"
+                </p>
+
+            </div>
+
+
+        </div>
+
 
         <span class="dream-label">
-            ♡ มหาวิทยาลัยในฝัน ♡
+
+            ♡ ประวัติการศึกษา ♡
+
         </span>
 
     </div>
@@ -695,18 +1046,26 @@
 
     <div class="info-box">
 
-        <h2>สิ่งที่ฉันสนใจ</h2>
+        <h2>
+            สิ่งที่ฉันสนใจ
+        </h2>
+
 
         <div class="interest-grid">
 
+
             <div class="interest-card">
 
-                <h3>📚 การเรียนรู้</h3>
+                <h3>
+                    📚 การเรียนรู้
+                </h3>
 
                 <p>
+
                     ชอบค้นคว้าความรู้ใหม่ ๆ
                     และพัฒนาความสามารถของตัวเอง
                     อยู่เสมอ
+
                 </p>
 
             </div>
@@ -714,11 +1073,15 @@
 
             <div class="interest-card">
 
-                <h3>🔬 วิทยาศาสตร์</h3>
+                <h3>
+                    🔬 วิทยาศาสตร์
+                </h3>
 
                 <p>
+
                     สนใจวิทยาศาสตร์และการค้นหาคำตอบ
                     ของสิ่งต่าง ๆ รอบตัว
+
                 </p>
 
             </div>
@@ -726,14 +1089,19 @@
 
             <div class="interest-card">
 
-                <h3>✨ ความคิดสร้างสรรค์</h3>
+                <h3>
+                    ✨ ความคิดสร้างสรรค์
+                </h3>
 
                 <p>
+
                     ชอบออกแบบ คิดไอเดียใหม่ ๆ
                     และสร้างผลงานที่สะท้อนความเป็นตัวเอง
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -742,25 +1110,37 @@
 
     <!-- ===== Goal ===== -->
 
-    <div class="goal" id="goal">
+    <div
+        class="goal"
+        id="goal"
+    >
 
-        <h2>ความฝันและเป้าหมาย</h2>
+        <h2>
+            ความฝันและเป้าหมาย
+        </h2>
 
         <p>
+
             เป้าหมายของฉันคือการพัฒนาตัวเอง
             ให้เป็นคนที่เก่งขึ้นและดีขึ้นในทุก ๆ วัน
+
             ตั้งใจเรียน เก็บเกี่ยวประสบการณ์
             และพยายามทำตามความฝันของตัวเองให้สำเร็จ
+
         </p>
 
         <br>
 
         <p>
+
             <b>
+
                 เพราะฉันเชื่อว่า...
                 ความฝันจะไม่ไกลเกินไป
                 ถ้าเราค่อย ๆ ก้าวไปข้างหน้า ♡
+
             </b>
+
         </p>
 
     </div>
@@ -770,7 +1150,8 @@
 
     <div class="quote">
 
-        เชื่อมั่นในตัวเอง ตั้งใจทำในสิ่งที่รัก
+        เชื่อมั่นในตัวเอง
+        ตั้งใจทำในสิ่งที่รัก
         และอย่ายอมแพ้ต่อความฝัน ♡
 
     </div>
@@ -781,19 +1162,28 @@
     <div class="page-navigation">
 
         <a href="./index.html">
+
             ♡ กลับหน้า Home
+
         </a>
 
     </div>
 
+
 </main>
 
 
+<!-- ===== Footer ===== -->
+
 <footer>
 
-    ธัญวรัตม์ | เว็บไซต์ Portfolio ส่วนตัว
+    ธัญวรัตม์
+    |
+    เว็บไซต์ Portfolio ส่วนตัว
 
 </footer>
 
+
 </body>
+
 </html>
