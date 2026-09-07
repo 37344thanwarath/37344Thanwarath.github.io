@@ -1,483 +1,560 @@
-<!-- หน้าแรก -->
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
-<meta charset="UTF-8">
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-<title>Thanwarath | Portfolio</title>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
 
-    body {
-        font-family: Arial, sans-serif;
-        background:
-            radial-gradient(
-                circle at top,
-                #ffe0ed 0%,
-                #fff0f6 45%,
-                #fff8fb 100%
-            );
-        color: #6b4055;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
-    }
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    /* ===== Card ===== */
-    .card {
-        width: 100%;
-        max-width: 650px;
-        background: rgba(255, 255, 255, 0.88);
-        border: 2px solid #f3b6cf;
-        border-radius: 24px;
-        padding: 50px 35px;
-        text-align: center;
-        box-shadow:
-            0 20px 60px rgba(220, 120, 160, 0.20),
-            0 5px 25px rgba(240, 160, 190, 0.12);
-        transition: 0.3s;
-    }
+    <title>Thanwarath | Home</title>
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow:
-            0 25px 70px rgba(220, 120, 160, 0.35);
-    }
+    <style>
 
-    /* ===== รูปโปรไฟล์ ===== */
-    .profile-wrap {
-        position: relative;
-        width: 150px;
-        height: 150px;
-        margin: 0 auto 25px;
-        animation: profileFloat 4s ease-in-out infinite;
-    }
-
-    .profile {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 5px solid #f3b6cf;
-        box-shadow:
-            0 0 0 6px #fff0f6,
-            0 0 30px rgba(220, 120, 160, 0.3);
-        transition: 0.3s;
-        display: block;
-    }
-
-    .profile:hover {
-        transform: scale(1.05);
-    }
-
-    /* ===== วงกลมเส้นประรอบรูป ===== */
-    .profile-wrap::before {
-        content: "";
-        position: absolute;
-        width: 172px;
-        height: 172px;
-        top: -11px;
-        left: -11px;
-        border: 2px dashed rgba(225, 123, 168, 0.45);
-        border-radius: 50%;
-        animation: spin 12s linear infinite;
-        pointer-events: none;
-    }
-
-    /* ===== วงแสงด้านหลัง ===== */
-    .profile-wrap::after {
-        content: "";
-        position: absolute;
-        width: 190px;
-        height: 190px;
-        top: -20px;
-        left: -20px;
-        border-radius: 50%;
-        background:
-            radial-gradient(
-                circle,
-                rgba(255, 190, 215, 0.20),
-                transparent 65%
-            );
-        animation: glow 3s ease-in-out infinite;
-        z-index: -1;
-    }
-
-    /* ===== ของตกแต่ง ===== */
-    .deco {
-        position: absolute;
-        z-index: 10;
-        pointer-events: none;
-        user-select: none;
-    }
-
-    /* หัวใจ */
-    .heart {
-        color: #e58aae;
-        text-shadow:
-            0 4px 12px rgba(229, 138, 174, 0.25);
-    }
-
-    /* ดาว */
-    .star {
-        color: #e58aae;
-        text-shadow:
-            0 4px 12px rgba(229, 138, 174, 0.25);
-    }
-
-    /* หัวใจดวงที่ 1 */
-    .heart-1 {
-        top: 2px;
-        right: -30px;
-        font-size: 28px;
-        animation: floatHeart 3s ease-in-out infinite;
-    }
-
-    /* หัวใจดวงที่ 2 */
-    .heart-2 {
-        bottom: 8px;
-        left: -28px;
-        font-size: 22px;
-        animation: floatHeart2 3.5s ease-in-out infinite;
-    }
-
-    /* ดาวดวงที่ 1 */
-    .star-1 {
-        top: 32px;
-        left: -32px;
-        font-size: 23px;
-        animation: twinkle 2s ease-in-out infinite;
-    }
-
-    /* ดาวดวงที่ 2 */
-    .star-2 {
-        bottom: -10px;
-        right: 5px;
-        font-size: 19px;
-        animation: twinkle 2.3s ease-in-out infinite 0.5s;
-    }
-
-    /* ประกาย */
-    .sparkle-1 {
-        top: -13px;
-        right: 20px;
-        color: #f0a2bf;
-        font-size: 17px;
-        animation: twinkle 1.8s ease-in-out infinite 0.3s;
-    }
-
-    .sparkle-2 {
-        bottom: 35px;
-        right: -37px;
-        color: #f0a2bf;
-        font-size: 14px;
-        animation: twinkle 2.4s ease-in-out infinite 0.8s;
-    }
-
-    .sparkle-3 {
-        top: 65px;
-        left: -43px;
-        color: #e58aae;
-        font-size: 11px;
-        animation: twinkle 2.1s ease-in-out infinite 0.6s;
-    }
-
-    /* ===== Animation ===== */
-    @keyframes profileFloat {
-        0%,
-        100% {
-            transform: translateY(0);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        50% {
-            transform: translateY(-6px);
-        }
-    }
-
-    @keyframes spin {
-        from {
-            transform: rotate(0deg);
+        html {
+            scroll-behavior: smooth;
         }
 
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    @keyframes glow {
-        0%,
-        100% {
-            opacity: 0.5;
-            transform: scale(0.95);
-        }
-
-        50% {
-            opacity: 1;
-            transform: scale(1.05);
-        }
-    }
-
-    @keyframes floatHeart {
-        0%,
-        100% {
-            transform:
-                translate(0, 0)
-                rotate(-8deg);
-        }
-
-        50% {
-            transform:
-                translate(5px, -10px)
-                rotate(8deg);
-        }
-    }
-
-    @keyframes floatHeart2 {
-        0%,
-        100% {
-            transform:
-                translate(0, 0)
-                rotate(8deg);
-        }
-
-        50% {
-            transform:
-                translate(-5px, -8px)
-                rotate(-8deg);
-        }
-    }
-
-    @keyframes twinkle {
-        0%,
-        100% {
-            opacity: 0.4;
-            transform:
-                scale(0.8)
-                rotate(0deg);
-        }
-
-        50% {
-            opacity: 1;
-            transform:
-                scale(1.25)
-                rotate(15deg);
-        }
-    }
-
-    /* ===== Text ===== */
-    h1 {
-        font-size: 42px;
-        margin-bottom: 15px;
-        color: #6b4055;
-    }
-
-    h1 span {
-        color: #d96f9f;
-        text-shadow:
-            0 0 15px rgba(217, 111, 159, 0.25);
-    }
-
-    .intro {
-        color: #806674;
-        font-size: 18px;
-        line-height: 1.8;
-        margin-bottom: 25px;
-    }
-
-    .interest {
-        color: #b85f87;
-        font-size: 17px;
-        margin-bottom: 20px;
-    }
-
-    .goal {
-        color: #d96899;
-        font-size: 17px;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-
-    /* ===== Button ===== */
-    .button {
-        display: inline-block;
-        background: #e58aae;
-        color: #ffffff;
-        padding: 13px 30px;
-        text-decoration: none;
-        border-radius: 12px;
-        font-weight: bold;
-        box-shadow:
-            0 8px 25px rgba(220, 120, 160, 0.25);
-        transition: 0.3s;
-    }
-
-    .button:hover {
-        background: #f0b0c8;
-        color: #6b4055;
-        transform: translateY(-4px);
-        box-shadow:
-            0 12px 30px rgba(220, 120, 160, 0.3);
-    }
-
-    /* ===== Small Text ===== */
-    .small {
-        margin-top: 25px;
-        color: #a6788d;
-        font-size: 13px;
-    }
-
-    /* ===== Mobile ===== */
-    @media (max-width: 600px) {
         body {
-            padding: 20px;
+            font-family: Arial, sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 10% 15%,
+                    rgba(255, 182, 211, 0.65),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(255, 214, 231, 0.75),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff4f8,
+                    #ffe5ef,
+                    #fff8fb
+                );
+
+            color: #70445a;
+
+            line-height: 1.7;
+
+            min-height: 100vh;
+
+            position: relative;
+
+            overflow-x: hidden;
         }
 
-        .card {
-            padding: 40px 22px;
+
+        /* ===== ของตกแต่งพื้นหลัง ===== */
+
+        body::before {
+            content: "♡  🎀  ♡  ✿  ♡  🎀  ♡";
+
+            position: fixed;
+
+            top: 90px;
+            left: 0;
+
+            width: 100%;
+
+            text-align: center;
+
+            color: rgba(238, 132, 172, 0.18);
+
+            font-size: 25px;
+
+            letter-spacing: 12px;
+
+            pointer-events: none;
+
+            z-index: -1;
         }
 
-        .profile-wrap {
-            width: 135px;
-            height: 135px;
+
+        body::after {
+            content: "♡";
+
+            position: fixed;
+
+            right: 7%;
+            bottom: 8%;
+
+            color: rgba(231, 111, 157, 0.18);
+
+            font-size: 90px;
+
+            transform: rotate(-15deg);
+
+            pointer-events: none;
+
+            z-index: -1;
         }
 
-        .profile {
-            width: 135px;
-            height: 135px;
+
+        /* ===== Navigation ===== */
+
+        nav {
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 18px 8%;
+
+            background: rgba(255, 255, 255, 0.90);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 2px solid #f5b4ce;
+
+            box-shadow:
+                0 5px 20px
+                rgba(220, 110, 155, 0.10);
         }
 
-        .profile-wrap::before {
-            width: 157px;
-            height: 157px;
-            top: -11px;
-            left: -11px;
+
+        .logo {
+            font-size: 22px;
+
+            font-weight: bold;
+
+            color: #df6f9f;
+
+            text-shadow:
+                0 2px 8px
+                rgba(223, 111, 159, 0.18);
         }
 
-        .heart-1 {
-            right: -25px;
+
+        .logo::before {
+            content: "🎀 ";
         }
 
-        .heart-2 {
-            left: -24px;
+
+        nav a {
+            color: #c65d89;
+
+            text-decoration: none;
+
+            margin-left: 20px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
         }
 
-        .star-1 {
-            left: -27px;
+
+        nav a:hover {
+            color: #ec6fa5;
+
+            transform: translateY(-2px);
         }
 
-        .sparkle-2 {
-            right: -30px;
+
+        /* ===== Main Content ===== */
+
+        .container {
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 80px 20px;
         }
+
+
+        /* ===== Welcome Box ===== */
+
+        .welcome {
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.94),
+                    rgba(255,248,251,0.94)
+                );
+
+            border: 2px solid #f2b4cd;
+
+            padding: 55px 35px;
+
+            border-radius: 24px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(220, 110, 155, 0.15);
+
+            text-align: center;
+
+            overflow: hidden;
+        }
+
+
+        .welcome::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 10px;
+
+            border: 2px dashed #f6c1d7;
+
+            border-radius: 18px;
+
+            pointer-events: none;
+        }
+
+
+        .welcome::after {
+            content: "🎀";
+
+            position: absolute;
+
+            right: 22px;
+
+            top: 12px;
+
+            font-size: 32px;
+
+            transform: rotate(8deg);
+        }
+
+
+        .number {
+            display: inline-block;
+
+            color: #e36f9e;
+
+            font-family: monospace;
+
+            font-weight: bold;
+
+            background: #ffd6e6;
+
+            padding: 5px 12px;
+
+            border-radius: 50px;
+
+            margin-bottom: 20px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
 
         h1 {
-            font-size: 34px;
+            font-size: 42px;
+
+            color: #703f56;
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-bottom: 15px;
         }
 
-        .intro {
-            font-size: 16px;
+
+        h1::after {
+            content: " ♡";
+
+            color: #ed83ad;
+
+            font-size: 28px;
         }
 
-        .interest,
-        .goal {
-            font-size: 15px;
+
+        .welcome p {
+            color: #806274;
+
+            font-size: 18px;
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-bottom: 30px;
         }
-    }
-</style>
+
+
+        /* ===== Menu ===== */
+
+        .menu {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            position: relative;
+
+            z-index: 5;
+        }
+
+
+        .menu a {
+            display: block;
+
+            min-width: 150px;
+
+            padding: 15px 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff,
+                    #fff0f6
+                );
+
+            border: 2px solid #f1aec9;
+
+            border-radius: 18px;
+
+            color: #c65d89;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 20px
+                rgba(220, 110, 155, 0.14);
+
+            transition: all 0.3s ease;
+        }
+
+
+        .menu a:hover {
+            transform: translateY(-5px);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff,
+                    #ffdce9
+                );
+
+            border-color: #e978a5;
+
+            color: #b94d7d;
+
+            box-shadow:
+                0 14px 30px
+                rgba(220, 110, 155, 0.23);
+        }
+
+
+        /* ===== Footer ===== */
+
+        footer {
+            text-align: center;
+
+            padding: 40px 20px;
+
+            border-top: 2px solid #f3bdd2;
+
+            color: #a4778b;
+
+            font-size: 13px;
+
+            background: rgba(255,255,255,0.35);
+        }
+
+
+        footer::before {
+            content: "♡  🎀  ♡  🐱  ♡  🎀  ♡";
+
+            display: block;
+
+            color: #e982ad;
+
+            font-size: 18px;
+
+            margin-bottom: 10px;
+
+            letter-spacing: 5px;
+        }
+
+
+        /* ===== Mobile ===== */
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px 20px;
+            }
+
+
+            nav div:last-child {
+                display: none;
+            }
+
+
+            .container {
+                padding: 55px 15px;
+            }
+
+
+            .welcome {
+                padding: 45px 20px;
+            }
+
+
+            h1 {
+                font-size: 30px;
+            }
+
+
+            .welcome p {
+                font-size: 16px;
+            }
+
+
+            .menu {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+
+            .menu a {
+                width: 100%;
+
+                max-width: none;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<div class="card">
 
-    <!-- รูปโปรไฟล์ + ของตกแต่ง -->
-    <div class="profile-wrap">
+    <!-- Navigation -->
 
-        <!-- รูปภาพ -->
-        <img
-            src="profile.jpg"
-            alt="รูปโปรไฟล์ของธัญวรัตม์"
-            class="profile"
-        >
+    <nav>
 
-        <!-- หัวใจ -->
-        <span class="deco heart heart-1">
-            ♡
-        </span>
+        <div class="logo">
+            Thanwarath.
+        </div>
 
-        <span class="deco heart heart-2">
-            ♥
-        </span>
 
-        <!-- ดาว -->
-        <span class="deco star star-1">
-            ★
-        </span>
+        <div>
 
-        <span class="deco star star-2">
-            ✦
-        </span>
+            <a href="index.html">
+                Home
+            </a>
 
-        <!-- ประกาย -->
-        <span class="deco sparkle-1">
-            ✧
-        </span>
+            <!-- แก้เป็นชื่อไฟล์จริง -->
+            <a href="introduction.html">
+                คำนำ
+            </a>
 
-        <span class="deco sparkle-2">
-            ✦
-        </span>
+            <a href="about.html">
+                About Me
+            </a>
 
-        <span class="deco sparkle-3">
-            ·
-        </span>
+            <a href="portfolio.html">
+                Portfolio
+            </a>
 
-    </div>
+        </div>
 
-    <h1>
-        สวัสดีค่ะ ฉันชื่อ
-        <span>
-            ธัญวรัตม์
-        </span>
-    </h1>
+    </nav>
 
-    <p class="intro">
-        นักเรียนชั้นมัธยมศึกษาปีที่ 6
-        สายการเรียนเตรียมวิศวกรรมศาสตร์
-    </p>
 
-    <p class="interest">
-        🔬 สนใจชีววิทยา
-        &nbsp;·&nbsp;
-        🧪 สนใจเคมี
-        &nbsp;·&nbsp;
-        🔬 ชอบการทดลอง
-    </p>
+    <!-- Main Content -->
 
-    <p class="goal">
-        🎓 เป้าหมายในอนาคต: นักกายภาพบำบัด
-    </p>
+    <main class="container">
 
-    <a
-        href="portfolio.html"
-        class="button"
-    >
-        📁 ดูแฟ้มสะสมงาน
-    </a>
+        <section class="welcome">
 
-    <p class="small">
-        Portfolio ของ Thanwarath
-    </p>
+            <div class="number">
+                00.
+            </div>
 
-</div>
+
+            <h1>
+                Welcome to My Portfolio
+            </h1>
+
+
+            <p>
+                ยินดีต้อนรับเข้าสู่แฟ้มสะสมผลงานของ Thanwarath
+            </p>
+
+
+            <div class="menu">
+
+                <!-- คำนำ -->
+                <a href="introduction.html">
+                    ♡ คำนำ
+                </a>
+
+
+                <!-- About Me -->
+                <a href="about.html">
+                    ♡ About Me
+                </a>
+
+
+                <!-- Portfolio -->
+                <a href="portfolio.html">
+                    ♡ Portfolio
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Designed & Built by
+            <strong>Thanwarath</strong>
+        </p>
+
+
+        <p>
+            © 2026 Thanwarath
+        </p>
+
+    </footer>
+
 
 </body>
+
 </html>
