@@ -139,198 +139,6 @@
             margin-bottom: 45px;
         }
 
-        .profile-wrap {
-            position: relative;
-
-            width: 180px;
-            height: 180px;
-
-            margin: 0 auto 25px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-        }
-
-        .profile-wrap::before {
-            content: "";
-
-            position: absolute;
-
-            width: 202px;
-            height: 202px;
-
-            border: 2px dashed #efa1bf;
-
-            border-radius: 50%;
-
-            animation: spin 18s linear infinite;
-
-            opacity: 0.75;
-        }
-
-        .profile-wrap::after {
-            content: "";
-
-            position: absolute;
-
-            width: 220px;
-            height: 220px;
-
-            border-radius: 50%;
-
-            background: radial-gradient(
-                circle,
-                rgba(255, 170, 205, 0.38),
-                transparent 65%
-            );
-
-            animation: glow 3s ease-in-out infinite;
-        }
-
-        .profile {
-            position: relative;
-
-            z-index: 3;
-
-            width: 180px;
-            height: 180px;
-
-            object-fit: cover;
-
-            border-radius: 50%;
-
-            border: 5px solid white;
-
-            box-shadow:
-                0 12px 30px rgba(220, 110, 160, 0.25);
-
-            animation: profileFloat 4s ease-in-out infinite;
-        }
-
-
-        /* =========================
-           KITTY DECORATIONS
-        ========================= */
-
-        .photo-deco {
-            position: absolute;
-
-            z-index: 5;
-
-            pointer-events: none;
-
-            user-select: none;
-        }
-
-        .heart-one {
-            top: 0;
-            left: -8px;
-
-            color: #e87da7;
-
-            font-size: 28px;
-
-            animation: floatHeart 3.5s ease-in-out infinite;
-
-            text-shadow:
-                0 4px 12px rgba(230, 100, 150, 0.25);
-        }
-
-        .heart-two {
-            right: -8px;
-            bottom: 22px;
-
-            color: #f3a2c2;
-
-            font-size: 22px;
-
-            animation: floatHeart2 4s ease-in-out infinite;
-        }
-
-        .bow-one {
-            top: -18px;
-            right: 28px;
-
-            color: #ed78a8;
-
-            font-size: 28px;
-
-            animation: bowFloat 3s ease-in-out infinite;
-
-            filter:
-                drop-shadow(
-                    0 4px 8px
-                    rgba(220, 90, 140, 0.22)
-                );
-        }
-
-        .kitty-one {
-            left: -38px;
-            bottom: 5px;
-
-            font-size: 32px;
-
-            animation: kittyFloat 4s ease-in-out infinite;
-
-            filter:
-                drop-shadow(
-                    0 4px 8px
-                    rgba(220, 100, 150, 0.2)
-                );
-        }
-
-        .star-one {
-            top: 28px;
-            right: -12px;
-
-            color: #e99abb;
-
-            font-size: 21px;
-
-            animation: twinkle 2s ease-in-out infinite;
-        }
-
-        .star-two {
-            left: -15px;
-            bottom: 38px;
-
-            color: #f09abd;
-
-            font-size: 18px;
-
-            animation: twinkle 2.5s ease-in-out infinite;
-        }
-
-        .sparkle-one {
-            top: -5px;
-            left: 52px;
-
-            color: #f3a4c3;
-
-            font-size: 16px;
-
-            animation: twinkle 2.2s ease-in-out infinite;
-        }
-
-        .sparkle-two {
-            right: 42px;
-            bottom: -5px;
-
-            color: #e984ae;
-
-            font-size: 16px;
-
-            animation: twinkle 1.8s ease-in-out infinite;
-        }
-
-
-        /* =========================
-           INTRO TEXT
-        ========================= */
-
         .intro h1 {
             font-size: clamp(32px, 5vw, 52px);
 
@@ -534,130 +342,6 @@
 
 
         /* =========================
-           ANIMATIONS
-        ========================= */
-
-        @keyframes profileFloat {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-7px);
-            }
-        }
-
-        @keyframes spin {
-
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes glow {
-
-            0%,
-            100% {
-                transform: scale(0.95);
-
-                opacity: 0.5;
-            }
-
-            50% {
-                transform: scale(1.05);
-
-                opacity: 0.9;
-            }
-        }
-
-        @keyframes floatHeart {
-
-            0%,
-            100% {
-                transform:
-                    translateY(0)
-                    rotate(-8deg);
-            }
-
-            50% {
-                transform:
-                    translateY(-10px)
-                    rotate(8deg);
-            }
-        }
-
-        @keyframes floatHeart2 {
-
-            0%,
-            100% {
-                transform:
-                    translateY(0)
-                    rotate(8deg);
-            }
-
-            50% {
-                transform:
-                    translateY(8px)
-                    rotate(-8deg);
-            }
-        }
-
-        @keyframes bowFloat {
-
-            0%,
-            100% {
-                transform:
-                    translateY(0)
-                    rotate(-5deg);
-            }
-
-            50% {
-                transform:
-                    translateY(-7px)
-                    rotate(5deg);
-            }
-        }
-
-        @keyframes kittyFloat {
-
-            0%,
-            100% {
-                transform:
-                    translateY(0)
-                    rotate(-5deg);
-            }
-
-            50% {
-                transform:
-                    translateY(-8px)
-                    rotate(5deg);
-            }
-        }
-
-        @keyframes twinkle {
-
-            0%,
-            100% {
-                transform: scale(0.8);
-
-                opacity: 0.45;
-            }
-
-            50% {
-                transform: scale(1.25);
-
-                opacity: 1;
-            }
-        }
-
-
-        /* =========================
            MOBILE
         ========================= */
 
@@ -677,34 +361,6 @@
                 width: 92%;
 
                 padding-top: 40px;
-            }
-
-            .profile-wrap {
-                width: 160px;
-                height: 160px;
-            }
-
-            .profile {
-                width: 160px;
-                height: 160px;
-            }
-
-            .profile-wrap::before {
-                width: 182px;
-                height: 182px;
-            }
-
-            .profile-wrap::after {
-                width: 200px;
-                height: 200px;
-            }
-
-            .kitty-one {
-                left: -28px;
-            }
-
-            .bow-one {
-                right: 18px;
             }
 
             .portfolio-item {
@@ -790,60 +446,13 @@
 
         <section class="intro">
 
-
-            <div class="profile-wrap">
-
-                <img
-                    src="profile.jpg"
-                    alt="รูปโปรไฟล์ของธัญวรัตม์"
-                    class="profile"
-                >
-
-
-                <span class="photo-deco heart-one">
-                    ♡
-                </span>
-
-                <span class="photo-deco heart-two">
-                    ♥
-                </span>
-
-                <span class="photo-deco bow-one">
-                    🎀
-                </span>
-
-                <span class="photo-deco kitty-one">
-                    🐱
-                </span>
-
-                <span class="photo-deco star-one">
-                    ✦
-                </span>
-
-                <span class="photo-deco star-two">
-                    ✧
-                </span>
-
-                <span class="photo-deco sparkle-one">
-                    ✿
-                </span>
-
-                <span class="photo-deco sparkle-two">
-                    ♡
-                </span>
-
-            </div>
-
-
             <h1>
                 ธัญวรัตม์
             </h1>
 
-
             <h2>
                 Portfolio
             </h2>
-
 
             <p>
                 แฟ้มสะสมผลงานของฉัน
@@ -851,11 +460,9 @@
                 และความตั้งใจในการเรียนรู้
             </p>
 
-
             <div class="dream">
                 🎀 My Dream · My Future · My Portfolio 🎀
             </div>
-
 
         </section>
 
@@ -867,41 +474,7 @@
         <section class="portfolio-list">
 
 
-            <!-- 01 About Me -->
-
-            <a
-                href="about.html"
-                class="portfolio-item"
-            >
-
-                <div class="number">
-                    01
-                </div>
-
-                <div class="icon">
-                    🐱
-                </div>
-
-                <div class="item-content">
-
-                    <h3>
-                        About Me
-                    </h3>
-
-                    <p>
-                        ประวัติส่วนตัวและความสนใจ
-                    </p>
-
-                </div>
-
-                <div class="arrow">
-                    →
-                </div>
-
-            </a>
-
-
-            <!-- 02 Skills -->
+            <!-- 01 Skills -->
 
             <a
                 href="skill.html"
@@ -909,7 +482,7 @@
             >
 
                 <div class="number">
-                    02
+                    01
                 </div>
 
                 <div class="icon">
@@ -935,7 +508,7 @@
             </a>
 
 
-            <!-- 03 Contact -->
+            <!-- 02 Contact -->
 
             <a
                 href="contact.html"
@@ -943,7 +516,7 @@
             >
 
                 <div class="number">
-                    03
+                    02
                 </div>
 
                 <div class="icon">
@@ -953,7 +526,7 @@
                 <div class="item-content">
 
                     <h3>
-                        ติดต่อ
+                        Contact
                     </h3>
 
                     <p>
