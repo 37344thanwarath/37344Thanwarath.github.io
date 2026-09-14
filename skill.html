@@ -2,15 +2,11 @@
 <html lang="th">
 
 <head>
-
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Thanwarath | Skills</title>
+    <title>Thanwarath | Skills & Activities</title>
 
     <style>
 
@@ -25,822 +21,415 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-
-            background:
-                radial-gradient(
-                    circle at top left,
-                    #ffd6e7,
-                    transparent 45%
-                ),
-                radial-gradient(
-                    circle at bottom right,
-                    #ffeaf3,
-                    transparent 45%
-                ),
-                linear-gradient(
-                    135deg,
-                    #fff0f6,
-                    #fff9fb
-                );
-
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(135deg, #fff7fb, #fff0f6);
             color: #70485b;
-            position: relative;
-            overflow-x: hidden;
+            line-height: 1.7;
         }
 
-        body::before {
-            content: "🎀";
-            position: fixed;
-            top: 90px;
-            left: 25px;
-            font-size: 45px;
-            opacity: 0.45;
-            animation: float 4s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        body::after {
-            content: "♡  ✦  ♡";
-            position: fixed;
-            right: 25px;
-            bottom: 80px;
-            font-size: 25px;
-            color: #e889ad;
-            opacity: 0.55;
-            animation: twinkle 2.5s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-
-        /* ===== Navigation ===== */
+        /* ===== Navbar ===== */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
 
-            width: 100%;
-            padding: 18px 7%;
+            background: rgba(255, 247, 251, 0.95);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 2px solid #f3b6cf;
+
+            padding: 15px 30px;
 
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            background: rgba(255, 255, 255, 0.90);
-
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-
-            border-bottom: 2px solid #f3b6cf;
-
-            box-shadow:
-                0 4px 15px rgba(224, 126, 164, 0.08);
         }
 
         .logo {
-            font-size: 25px;
+            font-size: 24px;
             font-weight: bold;
-            color: #d85f91;
-        }
-
-        .logo::after {
-            content: " 🎀";
-            font-size: 17px;
+            color: #d66b9c;
         }
 
         .nav-links {
             display: flex;
-            gap: 25px;
+            gap: 20px;
+            list-style: none;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #a95879;
+            color: #70485b;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .nav-links a:hover {
-            color: #e05f96;
-            transform: translateY(-2px);
+            color: #d65c93;
         }
 
+        /* ===== Header ===== */
 
-        /* ===== Container ===== */
-
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: 55px auto;
+        header {
+            text-align: center;
+            padding: 70px 20px 40px;
         }
 
-
-        /* ===== Card ===== */
-
-        .card {
-            background: rgba(255, 255, 255, 0.92);
-
-            border: 2px solid #f3b6cf;
-            border-radius: 28px;
-
-            padding: 45px 35px;
-
-            box-shadow:
-                0 20px 50px rgba(221, 112, 157, 0.18);
-
-            margin-bottom: 35px;
-            position: relative;
+        header h1 {
+            font-size: 42px;
+            color: #d65c93;
+            margin-bottom: 10px;
         }
 
-        .card::before {
-            content: "🎀";
-
-            position: absolute;
-            top: -25px;
-            right: 35px;
-
-            font-size: 48px;
-            transform: rotate(10deg);
+        header p {
+            font-size: 18px;
         }
 
+        .cute {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
 
-        /* ===== Section Title ===== */
+        /* ===== Main ===== */
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
 
         .section-title {
             text-align: center;
-            margin-bottom: 35px;
+            margin: 50px 0 25px;
         }
 
-        .section-title .number {
-            display: block;
-
-            font-size: 18px;
-            font-weight: bold;
-
-            color: #e18aae;
-            margin-bottom: 8px;
-        }
-
-        .section-title h1 {
-            font-size: 40px;
-            color: #b94f79;
-            margin-bottom: 10px;
-        }
-
-        .section-title h1::before {
-            content: "♡ ";
-            color: #e879a5;
-        }
-
-        .section-title h1::after {
-            content: " ♡";
-            color: #e879a5;
+        .section-title h2 {
+            color: #d65c93;
+            font-size: 30px;
         }
 
         .section-title p {
-            color: #c47a99;
-            font-size: 17px;
+            margin-top: 5px;
+            color: #8c6174;
         }
-
 
         /* ===== Skills ===== */
 
-        .skills-grid {
+        .skills-container {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
 
         .skill-card {
-            padding: 28px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff5f9,
-                    #ffeaf3
-                );
-
-            border: 2px solid #f2bfd4;
-            border-radius: 22px;
-
-            text-align: center;
+            background: white;
+            border: 2px solid #f3b6cf;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(214, 92, 147, 0.08);
             transition: 0.3s;
-
-            box-shadow:
-                0 10px 25px rgba(210, 105, 150, 0.10);
-
-            position: relative;
-        }
-
-        .skill-card::after {
-            content: "♡";
-
-            position: absolute;
-            top: 10px;
-            right: 15px;
-
-            color: #ed9cba;
-            font-size: 18px;
         }
 
         .skill-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(214, 92, 147, 0.15);
+        }
 
-            border-color: #e58aad;
-
-            box-shadow:
-                0 15px 30px rgba(210, 105, 150, 0.20);
+        .skill-card h3 {
+            color: #d65c93;
+            margin-bottom: 10px;
+            font-size: 21px;
         }
 
         .skill-icon {
-            font-size: 42px;
-            margin-bottom: 12px;
-        }
-
-        .skill-card h2 {
-            color: #b84f7a;
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
-
-        .skill-card p {
-            color: #805f6e;
-            line-height: 1.7;
-        }
-
-
-        /* ===== Highlight ===== */
-
-        .highlight-box {
-            margin-top: 30px;
-
-            padding: 25px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ffeaf3,
-                    #fff7fa
-                );
-
-            border: 2px solid #f2bfd4;
-            border-radius: 22px;
-
-            text-align: center;
-        }
-
-        .highlight-box h2 {
-            color: #b84f7a;
-            font-size: 23px;
-            margin-bottom: 15px;
-        }
-
-        .highlight-box p {
-            color: #805f6e;
-            line-height: 1.8;
-            font-size: 16px;
-        }
-
-
-        /* ===== Project ===== */
-
-        .project-box {
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff7fa,
-                    #ffe8f2
-                );
-
-            border: 2px solid #f2bfd4;
-            border-radius: 25px;
-
-            padding: 30px;
-
-            text-align: center;
-
-            box-shadow:
-                0 10px 25px rgba(210, 105, 150, 0.10);
-
-            margin-bottom: 25px;
-        }
-
-        .project-icon {
-            font-size: 50px;
-            margin-bottom: 15px;
-        }
-
-        .project-box h2 {
-            color: #b84f7a;
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-
-        .project-box p {
-            color: #805f6e;
-            line-height: 1.8;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-
-
-        /* ===== Project Image ===== */
-
-        .project-image {
-            width: 100%;
-            max-width: 650px;
-            height: 330px;
-
-            object-fit: cover;
-
-            display: block;
-            margin: 0 auto 25px auto;
-
-            border-radius: 20px;
-
-            border: 3px solid #f2bfd4;
-
-            box-shadow:
-                0 10px 25px rgba(210, 105, 150, 0.15);
-
-            transition: 0.3s;
-        }
-
-        .project-image:hover {
-            transform: scale(1.02);
-
-            box-shadow:
-                0 15px 30px rgba(210, 105, 150, 0.22);
-        }
-
-
-        .project-info {
-            background: rgba(255,255,255,0.75);
-
-            border-radius: 18px;
-
-            padding: 18px;
-
-            margin-top: 20px;
-
-            text-align: left;
-        }
-
-        .project-info p {
-            margin-bottom: 5px;
-        }
-
-
-        /* ===== Achievement ===== */
-
-        .certificate-box {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .certificate-box h2 {
-            color: #b84f7a;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .certificate-content {
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff7fa,
-                    #ffe8f2
-                );
-
-            border: 2px solid #f2bfd4;
-            border-radius: 25px;
-
-            padding: 30px;
-
-            box-shadow:
-                0 10px 25px rgba(210, 105, 150, 0.10);
-
-            transition: 0.3s;
-        }
-
-        .certificate-content:hover {
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 15px 30px
-                rgba(210, 105, 150, 0.18);
-        }
-
-        .certificate-icon {
-            font-size: 50px;
-            margin-bottom: 12px;
-        }
-
-        .certificate-content h3 {
-            color: #b84f7a;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .certificate-content p {
-            color: #805f6e;
-            line-height: 1.8;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .certificate-main {
-            font-size: 17px !important;
-        }
-
-
-        /* ===== Certificate Image ===== */
-
-        .certificate-image {
-            width: 100%;
-            max-width: 650px;
-            height: 330px;
-
-            object-fit: cover;
-
-            display: block;
-            margin: 0 auto 25px auto;
-
-            border-radius: 20px;
-
-            border: 3px solid #f2bfd4;
-
-            box-shadow:
-                0 10px 25px rgba(210, 105, 150, 0.15);
-
-            transition: 0.3s;
-        }
-
-        .certificate-image:hover {
-            transform: scale(1.02);
-
-            box-shadow:
-                0 15px 30px rgba(210, 105, 150, 0.22);
-        }
-
-
-        .certificate-info {
-            background: rgba(255, 255, 255, 0.75);
-
-            border-radius: 18px;
-
-            padding: 18px;
-
-            margin-top: 20px;
-
-            text-align: left;
-        }
-
-        .certificate-info p {
-            margin-bottom: 5px;
-        }
-
-
-        /* ===== Learning ===== */
-
-        .learning-box {
-            margin-top: 22px;
-
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            gap: 18px;
-        }
-
-        .learning-item {
-            background: #fff7fa;
-
-            border: 1px solid #f2bfd4;
-
-            border-radius: 18px;
-
-            padding: 20px;
-
-            text-align: left;
-        }
-
-        .learning-item h3 {
-            color: #b84f7a;
-
-            font-size: 18px;
-
+            font-size: 35px;
             margin-bottom: 8px;
         }
 
-        .learning-item p {
-            color: #805f6e;
+        /* ===== Highlight ===== */
 
-            line-height: 1.7;
+        .highlight {
+            margin-top: 30px;
+            padding: 30px;
 
-            font-size: 15px;
+            background: linear-gradient(
+                135deg,
+                #ffe4ef,
+                #fff4f8
+            );
+
+            border: 2px solid #f3b6cf;
+            border-radius: 25px;
+
+            text-align: center;
         }
 
+        .highlight h2 {
+            color: #d65c93;
+            margin-bottom: 10px;
+        }
 
-        /* ===== Page Navigation ===== */
+        /* ===== Project / Experience ===== */
 
-        .page-navigation {
+        .experience-card {
+            background: white;
+            border: 2px solid #f3b6cf;
+            border-radius: 25px;
+
+            padding: 25px;
+            margin-bottom: 30px;
+
+            box-shadow: 0 8px 20px rgba(214, 92, 147, 0.08);
+        }
+
+        .experience-card h3 {
+            color: #d65c93;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .experience-card h4 {
+            color: #9a637c;
+            margin-bottom: 15px;
+        }
+
+        .experience-card p {
+            margin-bottom: 12px;
+        }
+
+        /* ===== Images ===== */
+
+        .experience-image,
+        .certificate-image {
+            width: 100%;
+            max-width: 700px;
+
+            display: block;
+
+            margin: 20px auto;
+
+            border-radius: 18px;
+
+            border: 3px solid #f2bfd4;
+
+            box-shadow: 0 8px 20px rgba(214, 92, 147, 0.12);
+        }
+
+        /* ===== Video ===== */
+
+        .video-container {
+            position: relative;
             width: 100%;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            max-width: 800px;
 
-            gap: 20px;
-            margin-top: 35px;
-        }
+            margin: 20px auto;
 
-        .page-navigation a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            overflow: hidden;
 
-            min-height: 58px;
-
-            padding: 15px 35px;
-
-            background: rgba(255, 255, 255, 0.92);
-
-            border: 2px solid #f2b8cf;
             border-radius: 20px;
 
-            color: #b6537d;
-            text-decoration: none;
+            border: 3px solid #f2bfd4;
 
-            font-weight: bold;
-            font-size: 17px;
+            background: #ffeaf3;
 
-            box-shadow:
-                0 8px 20px rgba(210, 105, 150, 0.12);
+            aspect-ratio: 16 / 9;
 
-            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(214, 92, 147, 0.12);
         }
 
-        .page-navigation a:hover {
-            transform: translateY(-4px);
+        .video-container iframe {
+            position: absolute;
 
-            background: #fff0f6;
-            border-color: #e58aad;
+            top: 0;
+            left: 0;
 
-            box-shadow:
-                0 14px 28px rgba(210, 105, 150, 0.23);
+            width: 100%;
+            height: 100%;
+
+            border: none;
         }
 
+        /* ===== Tags ===== */
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: #ffe1ed;
+            color: #b34e7b;
+
+            padding: 6px 14px;
+
+            border-radius: 20px;
+
+            font-size: 14px;
+
+            border: 1px solid #f3b6cf;
+        }
 
         /* ===== Footer ===== */
 
         footer {
             text-align: center;
 
+            margin-top: 60px;
+
             padding: 30px 20px;
 
-            color: #b27b91;
-            font-size: 14px;
+            background: #ffe7f0;
+
+            border-top: 2px solid #f3b6cf;
+
+            color: #8c6174;
         }
 
-        footer::before {
-            content: "🎀  ";
+        footer .heart {
+            color: #d65c93;
         }
 
-        footer::after {
-            content: "  🎀";
-        }
+        /* ===== Responsive ===== */
 
-
-        /* ===== Animation ===== */
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes twinkle {
-
-            0%,
-            100% {
-                opacity: 0.4;
-                transform: scale(0.9);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.15);
-            }
-        }
-
-
-        /* ===== Mobile ===== */
-
-        @media (max-width: 700px) {
+        @media (max-width: 768px) {
 
             nav {
-                padding: 15px 5%;
-            }
-
-            .logo {
-                font-size: 21px;
-            }
-
-            .nav-links {
+                flex-direction: column;
                 gap: 12px;
             }
 
-            .nav-links a {
-                font-size: 13px;
-            }
-
-            .container {
-                width: 92%;
-                margin: 35px auto;
-            }
-
-            .card {
-                padding: 35px 20px;
-            }
-
-            .card::before {
-                right: 20px;
-                font-size: 38px;
-            }
-
-            .section-title h1 {
-                font-size: 32px;
-            }
-
-            .section-title p {
-                font-size: 15px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skill-card {
-                padding: 25px 20px;
-            }
-
-            .skill-card h2 {
-                font-size: 20px;
-            }
-
-            .skill-card p {
-                font-size: 15px;
-            }
-
-            .project-box h2 {
-                font-size: 21px;
-            }
-
-            .project-box p {
-                font-size: 15px;
-            }
-
-            .project-image,
-            .certificate-image {
-                height: 230px;
-            }
-
-            .certificate-content {
-                padding: 25px 20px;
-            }
-
-            .certificate-content h3 {
-                font-size: 20px;
-            }
-
-            .certificate-content p {
-                font-size: 15px;
-            }
-
-            .learning-box {
-                grid-template-columns: 1fr;
-            }
-
-            .page-navigation {
-                flex-direction: column;
-            }
-
-            .page-navigation a {
-                width: 100%;
-            }
-        }
-
-
-        @media (max-width: 400px) {
-
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
             .nav-links {
-                gap: 18px;
+                justify-content: center;
+                gap: 12px;
             }
 
-            .section-title h1 {
-                font-size: 27px;
+            header h1 {
+                font-size: 34px;
             }
 
-            body::before {
-                left: 10px;
-                font-size: 35px;
+            .skills-container {
+                grid-template-columns: 1fr;
             }
 
-            body::after {
-                right: 10px;
-                font-size: 20px;
+            .experience-card {
+                padding: 20px;
             }
+
         }
 
     </style>
-
 </head>
 
 
 <body>
 
-
-    <!-- ===== Navigation ===== -->
+    <!-- ===== Navbar ===== -->
 
     <nav>
 
         <div class="logo">
-            Thanwarath.
+            Thanwarath 🎀
         </div>
 
-        <div class="nav-links">
+        <ul class="nav-links">
 
-            <a href="./index.html">
-                Home
-            </a>
+            <li>
+                <a href="index.html">
+                    🏠 Home
+                </a>
+            </li>
 
-            <a href="./portfolio.html">
-                Portfolio
-            </a>
+            <li>
+                <a href="preface.html">
+                    🎀 คำนำ
+                </a>
+            </li>
 
-        </div>
+            <li>
+                <a href="about.html">
+                    🐱 About Me
+                </a>
+            </li>
+
+            <li>
+                <a href="skills.html">
+                    💗 Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    💌 ติดต่อ
+                </a>
+            </li>
+
+        </ul>
 
     </nav>
 
 
-    <!-- ===== Main Content ===== -->
+    <!-- ===== Header ===== -->
 
-    <main class="container">
+    <header>
+
+        <div class="cute">
+            🐱 ♡ 🎀 ♡ 🐱
+        </div>
+
+        <h1>
+            Skills & Activities
+        </h1>
+
+        <p>
+            ทักษะ ความสามารถ ผลงาน และประสบการณ์ของฉัน
+        </p>
+
+    </header>
 
 
-        <!-- ===== Skills Section ===== -->
+    <main>
 
-        <section class="card">
+
+        <!-- ===== Skills ===== -->
+
+        <section>
 
             <div class="section-title">
 
-                <span class="number">
-                    05.
-                </span>
-
-                <h1>
-                    ทักษะและความสามารถ
-                </h1>
+                <h2>
+                    💗 My Skills
+                </h2>
 
                 <p>
-                    Skills
+                    ทักษะและความสามารถที่ฉันสนใจและพัฒนาอยู่เสมอ
                 </p>
 
             </div>
 
 
-            <div class="skills-grid">
+            <div class="skills-container">
 
 
                 <div class="skill-card">
 
                     <div class="skill-icon">
-                        🧪
+                        🔬
                     </div>
 
-                    <h2>
+                    <h3>
                         วิทยาศาสตร์และการทดลอง
-                    </h2>
+                    </h3>
 
                     <p>
-                        มีความสนใจด้านวิทยาศาสตร์
-                        และการทดลอง สามารถเรียนรู้จากการลงมือทำจริง
-                        รวมถึงสังเกตและวิเคราะห์ผลการทดลองอย่างเป็นระบบ
+                        สนใจการเรียนรู้ทางวิทยาศาสตร์
+                        การทดลอง การสังเกต
+                        และการค้นหาคำตอบจากหลักฐาน
                     </p>
 
                 </div>
@@ -852,14 +441,14 @@
                         🧠
                     </div>
 
-                    <h2>
-                        การคิดวิเคราะห์และแก้ปัญหา
-                    </h2>
+                    <h3>
+                        การคิดวิเคราะห์
+                    </h3>
 
                     <p>
-                        สามารถคิดวิเคราะห์ปัญหาอย่างเป็นขั้นตอน
-                        และนำความรู้ทางวิทยาศาสตร์มาประยุกต์ใช้
-                        เพื่อหาแนวทางในการแก้ไขปัญหา
+                        สามารถวิเคราะห์ปัญหา
+                        คิดอย่างเป็นขั้นตอน
+                        และหาวิธีแก้ไขปัญหาอย่างเหมาะสม
                     </p>
 
                 </div>
@@ -868,17 +457,17 @@
                 <div class="skill-card">
 
                     <div class="skill-icon">
-                        🩺
+                        🦷
                     </div>
 
-                    <h2>
-                        ความสนใจด้านกายภาพบำบัด
-                    </h2>
+                    <h3>
+                        ความสนใจด้านทันตแพทยศาสตร์
+                    </h3>
 
                     <p>
-                        สนใจการดูแลและฟื้นฟูร่างกาย
-                        รวมถึงการส่งเสริมสุขภาพและการเคลื่อนไหว
-                        เพื่อช่วยให้ผู้ป่วยสามารถกลับมาใช้ชีวิตประจำวันได้ดีขึ้น
+                        สนใจด้านสุขภาพช่องปาก
+                        การดูแลฟัน
+                        และการทำงานในสายทันตแพทยศาสตร์
                     </p>
 
                 </div>
@@ -890,14 +479,15 @@
                         🤝
                     </div>
 
-                    <h2>
-                        การทำงานร่วมกับผู้อื่น
-                    </h2>
+                    <h3>
+                        การทำงานเป็นทีม
+                    </h3>
 
                     <p>
-                        สามารถทำงานร่วมกับผู้อื่นได้ดี
-                        มีความรับผิดชอบ รับฟังความคิดเห็น
-                        และพร้อมเรียนรู้จากประสบการณ์ของผู้อื่น
+                        สามารถทำงานร่วมกับผู้อื่น
+                        แบ่งหน้าที่
+                        รับฟังความคิดเห็น
+                        และช่วยกันแก้ไขปัญหา
                     </p>
 
                 </div>
@@ -905,97 +495,245 @@
 
             </div>
 
+        </section>
 
-            <!-- ===== Highlight ===== -->
 
-            <div class="highlight-box">
 
-                <h2>
-                    ✨ จุดเด่นที่ฉันอยากพัฒนา
-                </h2>
+        <!-- ===== Highlight ===== -->
 
-                <p>
-                    ฉันเป็นคนที่ชอบเรียนรู้จากการลงมือทำ
-                    สนใจการทดลองและการค้นหาคำตอบด้วยตนเอง
-                    พร้อมเปิดรับประสบการณ์ใหม่ ๆ
-                    และนำสิ่งที่เรียนรู้มาพัฒนาตนเองอย่างต่อเนื่อง
-                </p>
+        <section class="highlight">
 
-            </div>
+            <h2>
+                ✨ My Highlight ✨
+            </h2>
+
+            <p>
+                ฉันชอบเรียนรู้จากการลงมือทำจริง
+                โดยเฉพาะกิจกรรมทางวิทยาศาสตร์
+                การทดลอง และการทำงานร่วมกับผู้อื่น
+                เพราะช่วยให้ได้ฝึกทั้งความรู้
+                ความคิดวิเคราะห์ และความรับผิดชอบ
+            </p>
 
         </section>
 
 
 
-        <!-- ===== Project Section ===== -->
+        <!-- ===== Projects ===== -->
 
-        <section class="card">
+        <section>
 
             <div class="section-title">
 
-                <span class="number">
-                    06.
-                </span>
-
-                <h1>
-                    โครงงานที่ภาคภูมิใจ
-                </h1>
+                <h2>
+                    🎀 Projects & Experience
+                </h2>
 
                 <p>
-                    Projects
+                    ผลงาน กิจกรรม และประสบการณ์ที่ได้เรียนรู้
                 </p>
 
             </div>
 
 
-            <!-- ===== Project ===== -->
 
-            <div class="project-box">
+            <!-- Project 1 -->
 
-                <div class="project-icon">
-                    🍊🧪
+            <div class="experience-card">
+
+                <h3>
+                    🧪 โครงงานน้ำหมักชีวภาพจากเปลือกผลไม้
+                </h3>
+
+                <h4>
+                    โครงงานวิทยาศาสตร์
+                </h4>
+
+                <p>
+                    ศึกษาการทำน้ำหมักชีวภาพจากเปลือกผลไม้
+                    โดยได้ฝึกกระบวนการทดลอง
+                    การสังเกต การเก็บข้อมูล
+                    และการวิเคราะห์ผลที่เกิดขึ้น
+                </p>
+
+                <p>
+                    🎥 วิดีโอแสดงผลงานโครงงาน
+                </p>
+
+
+                <!-- YouTube Video -->
+
+                <div class="video-container">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/-AtJbpbMyt8"
+                        title="วิดีโอโครงงานน้ำหมักชีวภาพจากเปลือกผลไม้"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
                 </div>
 
 
-                <h2>
-                    โครงงานน้ำหมักชีวภาพจากเปลือกผลไม้
-                </h2>
+                <div class="tags">
+
+                    <span class="tag">
+                        วิทยาศาสตร์
+                    </span>
+
+                    <span class="tag">
+                        การทดลอง
+                    </span>
+
+                    <span class="tag">
+                        การสังเกต
+                    </span>
+
+                    <span class="tag">
+                        การทำงานเป็นทีม
+                    </span>
+
+                </div>
+
+            </div>
 
 
-                <!-- ===== ใส่รูปโครงงานตรงนี้ ===== -->
+
+            <!-- Experience 2 -->
+
+            <div class="experience-card">
+
+                <h3>
+                    🦷 ประสบการณ์ศึกษาดูงานคลินิกทันตกรรม
+                </h3>
+
+                <h4>
+                    Dental Clinic Experience
+                </h4>
+
+                <p>
+                    ได้เรียนรู้เกี่ยวกับการทำงานภายในคลินิกทันตกรรม
+                    ขั้นตอนการให้บริการผู้ป่วย
+                    การดูแลสุขภาพช่องปาก
+                    และการทำงานของบุคลากรทางทันตกรรม
+                </p>
+
 
                 <img
-                    src="project.jpg"
-                    alt="รูปโครงงานน้ำหมักชีวภาพจากเปลือกผลไม้"
-                    class="project-image"
+                    src="dental.jpg.jpg"
+                    alt="ประสบการณ์ศึกษาดูงานคลินิกทันตกรรม"
+                    class="experience-image"
                 >
 
 
+                <div class="tags">
+
+                    <span class="tag">
+                        ทันตแพทยศาสตร์
+                    </span>
+
+                    <span class="tag">
+                        สุขภาพช่องปาก
+                    </span>
+
+                    <span class="tag">
+                        ประสบการณ์
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Experience 3 -->
+
+            <div class="experience-card">
+
+                <h3>
+                    🫁 การผ่าปอดหมู
+                </h3>
+
+                <h4>
+                    Biology Activity
+                </h4>
+
                 <p>
-                    โครงงานที่นำเปลือกผลไม้มาใช้ให้เกิดประโยชน์
-                    โดยนำมาผลิตเป็นน้ำหมักชีวภาพ
-                    เพื่อเป็นแนวทางในการลดปริมาณขยะอินทรีย์
-                    และส่งเสริมการนำวัสดุเหลือใช้กลับมาใช้ประโยชน์
+                    ได้ศึกษาโครงสร้างและลักษณะของปอด
+                    ผ่านการลงมือปฏิบัติจริง
+                    ทำให้เข้าใจระบบทางเดินหายใจ
+                    และหน้าที่ของอวัยวะได้ชัดเจนมากขึ้น
                 </p>
 
 
-                <div class="project-info">
+                <img
+                    src="pig-lung.jpg.jpg"
+                    alt="กิจกรรมผ่าปอดหมู"
+                    class="experience-image"
+                >
 
-                    <p>
-                        <strong>ประเภทโครงงาน:</strong>
-                        โครงงานวิทยาศาสตร์
-                    </p>
 
-                    <p>
-                        <strong>หัวข้อ:</strong>
-                        น้ำหมักชีวภาพจากเปลือกผลไม้
-                    </p>
+                <div class="tags">
 
-                    <p>
-                        <strong>ทักษะที่ได้รับ:</strong>
-                        การทดลอง การสังเกต การวิเคราะห์
-                        และการทำงานร่วมกับผู้อื่น
-                    </p>
+                    <span class="tag">
+                        ชีววิทยา
+                    </span>
+
+                    <span class="tag">
+                        การทดลอง
+                    </span>
+
+                    <span class="tag">
+                        Anatomy
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Experience 4 -->
+
+            <div class="experience-card">
+
+                <h3>
+                    ❤️ การผ่าหัวใจหมู
+                </h3>
+
+                <h4>
+                    Biology Activity
+                </h4>
+
+                <p>
+                    ศึกษาโครงสร้างของหัวใจ
+                    และส่วนประกอบต่าง ๆ
+                    ผ่านการลงมือปฏิบัติจริง
+                    ทำให้เข้าใจการทำงานของระบบไหลเวียนเลือดมากขึ้น
+                </p>
+
+
+                <img
+                    src="pig-heart.jpg.jpg"
+                    alt="กิจกรรมผ่าหัวใจหมู"
+                    class="experience-image"
+                >
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        ชีววิทยา
+                    </span>
+
+                    <span class="tag">
+                        หัวใจ
+                    </span>
+
+                    <span class="tag">
+                        Anatomy
+                    </span>
 
                 </div>
 
@@ -1003,140 +741,64 @@
 
 
 
-            <!-- ===== Achievement ===== -->
+            <!-- Competition -->
 
-            <div class="certificate-box">
+            <div class="experience-card">
 
-                <h2>
-                    🏆 ผลงานและการแข่งขัน
-                </h2>
+                <h3>
+                    🏆 Multi Skills Competition
+                </h3>
 
+                <h4>
+                    การแข่งขันทักษะทางวิชาการ
+                </h4>
 
-                <div class="certificate-content">
+                <p>
+                    เข้าร่วมการแข่งขันทักษะทางวิชาการ
+                    Multi Skills Competition
+                    ระดับชั้นมัธยมศึกษาตอนต้น
+                    ประเภทปกติ
+                </p>
 
-                    <div class="certificate-icon">
-                        🏆
-                    </div>
-
-
-                    <h3>
-                        การแข่งขัน Multi Skills Competition
-                    </h3>
-
-
-                    <!-- ===== ใส่รูปการแข่งขันตรงนี้ ===== -->
-
-                    <img
-                        src="competition.jpg"
-                        alt="รูปการแข่งขัน Multi Skills Competition"
-                        class="certificate-image"
-                    >
+                <p>
+                    เป็นกิจกรรมที่ช่วยพัฒนาทักษะภาษาอังกฤษ
+                    การคิดวิเคราะห์
+                    การแก้ปัญหา
+                    และการทำงานภายใต้เวลาที่กำหนด
+                </p>
 
 
-                    <p class="certificate-main">
-
-                        เข้าร่วมการแข่งขัน
-                        <strong>Multi Skills Competition</strong>
-                        ประเภทสามัญระดับชั้น ม.1–ม.3
-
-                    </p>
+                <img
+                    src="competition.jpg.jpg"
+                    alt="การแข่งขัน Multi Skills Competition"
+                    class="certificate-image"
+                >
 
 
-                    <p>
+                <div class="tags">
 
-                        การแข่งขันทักษะวิชาการและการประกวด
-                        สิ่งประดิษฐ์นักเรียนโรงเรียนเอกชน
-                        จังหวัดอุดรธานี
+                    <span class="tag">
+                        Competition
+                    </span>
 
-                    </p>
+                    <span class="tag">
+                        English
+                    </span>
 
+                    <span class="tag">
+                        Academic Skills
+                    </span>
 
-                    <div class="certificate-info">
-
-                        <p>
-                            <strong>ครั้งที่:</strong>
-                            7
-                        </p>
-
-                        <p>
-                            <strong>ปีการศึกษา:</strong>
-                            2565
-                        </p>
-
-                        <p>
-                            <strong>ระดับชั้น:</strong>
-                            ม.1–ม.3
-                        </p>
-
-                        <p>
-                            <strong>ประเภทการแข่งขัน:</strong>
-                            Multi Skills Competition
-                        </p>
-
-                    </div>
-
-
-                    <!-- ===== Learning ===== -->
-
-                    <div class="learning-box">
-
-                        <div class="learning-item">
-
-                            <h3>
-                                🧠 สิ่งที่ได้เรียนรู้
-                            </h3>
-
-                            <p>
-
-                                ได้ฝึกการคิดและแก้ไขปัญหา
-                                ฝึกความรอบคอบ และเรียนรู้
-                                การเตรียมตัวก่อนเข้าร่วมการแข่งขัน
-
-                            </p>
-
-                        </div>
-
-
-                        <div class="learning-item">
-
-                            <h3>
-                                🌱 สิ่งที่นำไปพัฒนาต่อ
-                            </h3>
-
-                            <p>
-
-                                นำประสบการณ์จากการแข่งขัน
-                                มาพัฒนาความมั่นใจ การเรียนรู้
-                                และการทำงานร่วมกับผู้อื่น
-                                เพื่อใช้กับกิจกรรมในอนาคต
-
-                            </p>
-
-                        </div>
-
-                    </div>
+                    <span class="tag">
+                        Teamwork
+                    </span>
 
                 </div>
 
             </div>
+
 
         </section>
-
-
-
-        <!-- ===== Page Navigation ===== -->
-
-        <div class="page-navigation">
-
-            <a href="./portfolio.html">
-                ← Portfolio
-            </a>
-
-            <a href="./index.html">
-                🏠 หน้าหลัก
-            </a>
-
-        </div>
 
 
     </main>
@@ -1147,11 +809,14 @@
 
     <footer>
 
-        Designed &amp; Built by Thanwarath
+        <p>
+            🎀 Portfolio by <strong>Thanwarath</strong> 🎀
+        </p>
 
-        <br>
-
-        &copy; 2026 Thanwarath
+        <p>
+            Made with <span class="heart">♥</span>
+            and lots of dreams ✨
+        </p>
 
     </footer>
 
