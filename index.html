@@ -46,13 +46,9 @@
                 );
 
             color: #70445a;
-
             line-height: 1.7;
-
             min-height: 100vh;
-
             position: relative;
-
             overflow-x: hidden;
         }
 
@@ -63,10 +59,8 @@
             content: "♡  🎀  ♡  ✿  ♡  🎀  ♡";
 
             position: fixed;
-
             top: 90px;
             left: 0;
-
             width: 100%;
 
             text-align: center;
@@ -74,11 +68,9 @@
             color: rgba(238, 132, 172, 0.18);
 
             font-size: 25px;
-
             letter-spacing: 12px;
 
             pointer-events: none;
-
             z-index: -1;
         }
 
@@ -87,7 +79,6 @@
             content: "♡";
 
             position: fixed;
-
             right: 7%;
             bottom: 8%;
 
@@ -98,7 +89,6 @@
             transform: rotate(-15deg);
 
             pointer-events: none;
-
             z-index: -1;
         }
 
@@ -107,15 +97,11 @@
 
         nav {
             position: sticky;
-
             top: 0;
-
             z-index: 100;
 
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
 
             padding: 18px 8%;
@@ -134,7 +120,6 @@
 
         .logo {
             font-size: 22px;
-
             font-weight: bold;
 
             color: #df6f9f;
@@ -165,7 +150,6 @@
 
         nav a:hover {
             color: #ec6fa5;
-
             transform: translateY(-2px);
         }
 
@@ -409,42 +393,44 @@
                 padding: 15px 20px;
             }
 
-
             nav div:last-child {
-                display: none;
+                display: flex;
+
+                gap: 8px;
+
+                flex-wrap: wrap;
+
+                justify-content: flex-end;
             }
 
+            nav a {
+                margin-left: 8px;
+                font-size: 12px;
+            }
 
             .container {
                 padding: 55px 15px;
             }
 
-
             .welcome {
                 padding: 45px 20px;
             }
-
 
             h1 {
                 font-size: 30px;
             }
 
-
             .welcome p {
                 font-size: 16px;
             }
 
-
             .menu {
                 flex-direction: column;
-
                 gap: 12px;
             }
 
-
             .menu a {
                 width: 100%;
-
                 max-width: none;
             }
 
@@ -458,7 +444,7 @@
 <body>
 
 
-    <!-- Navigation -->
+    <!-- ================= Navigation ================= -->
 
     <nav>
 
@@ -469,21 +455,33 @@
 
         <div>
 
+            <!-- Home -->
             <a href="index.html">
-                Home
+                🏠 Home
             </a>
 
-            <!-- แก้เป็นชื่อไฟล์จริง -->
+
+            <!-- คำนำ -->
             <a href="introduction.html">
-                คำนำ
+                🎀 คำนำ
             </a>
 
+
+            <!-- About Me -->
             <a href="about.html">
-                About Me
+                🐱 About Me
             </a>
 
-            <a href="portfolio.html">
-                Portfolio
+
+            <!-- Skills -->
+            <a href="skill.html">
+                💗 Skills
+            </a>
+
+
+            <!-- ติดต่อ -->
+            <a href="contact.html">
+                💌 ติดต่อ
             </a>
 
         </div>
@@ -491,7 +489,7 @@
     </nav>
 
 
-    <!-- Main Content -->
+    <!-- ================= Main Content ================= -->
 
     <main class="container">
 
@@ -514,22 +512,30 @@
 
             <div class="menu">
 
+
                 <!-- คำนำ -->
                 <a href="introduction.html">
-                    ♡ คำนำ
+                    🎀 คำนำ
                 </a>
 
 
                 <!-- About Me -->
                 <a href="about.html">
-                    ♡ About Me
+                    🐱 About Me
                 </a>
 
 
-                <!-- Portfolio -->
-                <a href="portfolio.html">
-                    ♡ Portfolio
+                <!-- Skills -->
+                <a href="skill.html">
+                    💗 Skills
                 </a>
+
+
+                <!-- ติดต่อ -->
+                <a href="contact.html">
+                    💌 ติดต่อ
+                </a>
+
 
             </div>
 
@@ -538,7 +544,7 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- ================= Footer ================= -->
 
     <footer>
 
