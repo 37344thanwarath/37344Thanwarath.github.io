@@ -346,6 +346,37 @@
             margin-bottom: 15px;
         }
 
+
+        /* ===== Project Image ===== */
+
+        .project-image {
+            width: 100%;
+            max-width: 650px;
+            height: 330px;
+
+            object-fit: cover;
+
+            display: block;
+            margin: 0 auto 25px auto;
+
+            border-radius: 20px;
+
+            border: 3px solid #f2bfd4;
+
+            box-shadow:
+                0 10px 25px rgba(210, 105, 150, 0.15);
+
+            transition: 0.3s;
+        }
+
+        .project-image:hover {
+            transform: scale(1.02);
+
+            box-shadow:
+                0 15px 30px rgba(210, 105, 150, 0.22);
+        }
+
+
         .project-info {
             background: rgba(255,255,255,0.75);
 
@@ -424,6 +455,37 @@
         .certificate-main {
             font-size: 17px !important;
         }
+
+
+        /* ===== Certificate Image ===== */
+
+        .certificate-image {
+            width: 100%;
+            max-width: 650px;
+            height: 330px;
+
+            object-fit: cover;
+
+            display: block;
+            margin: 0 auto 25px auto;
+
+            border-radius: 20px;
+
+            border: 3px solid #f2bfd4;
+
+            box-shadow:
+                0 10px 25px rgba(210, 105, 150, 0.15);
+
+            transition: 0.3s;
+        }
+
+        .certificate-image:hover {
+            transform: scale(1.02);
+
+            box-shadow:
+                0 15px 30px rgba(210, 105, 150, 0.22);
+        }
+
 
         .certificate-info {
             background: rgba(255, 255, 255, 0.75);
@@ -646,6 +708,11 @@
 
             .project-box p {
                 font-size: 15px;
+            }
+
+            .project-image,
+            .certificate-image {
+                height: 230px;
             }
 
             .certificate-content {
@@ -881,7 +948,7 @@
             </div>
 
 
-            <!-- ===== Project 1 ===== -->
+            <!-- ===== Project ===== -->
 
             <div class="project-box">
 
@@ -893,6 +960,15 @@
                 <h2>
                     โครงงานน้ำหมักชีวภาพจากเปลือกผลไม้
                 </h2>
+
+
+                <!-- ===== ใส่รูปโครงงานตรงนี้ ===== -->
+
+                <img
+                    src="project.jpg"
+                    alt="รูปโครงงานน้ำหมักชีวภาพจากเปลือกผลไม้"
+                    class="project-image"
+                >
 
 
                 <p>
@@ -926,57 +1002,6 @@
             </div>
 
 
-            <!-- ===== Project 2 ===== -->
-
-            <div class="project-box">
-
-                <div class="project-icon">
-                    🌐🛡️
-                </div>
-
-
-                <h2>
-                    โครงงานการบล็อกเว็บไซต์พนันผ่านอินเทอร์เน็ต
-                </h2>
-
-
-                <p>
-                    โครงงานที่ศึกษาและพัฒนาระบบสำหรับบล็อก
-                    เว็บไซต์พนันผ่านเครือข่ายอินเทอร์เน็ต
-                    โดยใช้ MikroTik Router เพื่อช่วยควบคุม
-                    และจัดการการเข้าถึงเว็บไซต์ที่ไม่เหมาะสม
-                    ภายในเครือข่าย
-                </p>
-
-
-                <div class="project-info">
-
-                    <p>
-                        <strong>ประเภทโครงงาน:</strong>
-                        โครงงานเทคโนโลยีสารสนเทศและเครือข่าย
-                    </p>
-
-                    <p>
-                        <strong>เทคโนโลยีที่ใช้:</strong>
-                        MikroTik Router
-                    </p>
-
-                    <p>
-                        <strong>หัวข้อ:</strong>
-                        การบล็อกเว็บไซต์พนันผ่านอินเทอร์เน็ต
-                    </p>
-
-                    <p>
-                        <strong>ทักษะที่ได้รับ:</strong>
-                        การจัดการเครือข่าย การตั้งค่า Router
-                        การแก้ไขปัญหา และการทำงานอย่างเป็นระบบ
-                    </p>
-
-                </div>
-
-            </div>
-
-
 
             <!-- ===== Achievement ===== -->
 
@@ -997,6 +1022,15 @@
                     <h3>
                         การแข่งขัน Multi Skills Competition
                     </h3>
+
+
+                    <!-- ===== ใส่รูปการแข่งขันตรงนี้ ===== -->
+
+                    <img
+                        src="competition.jpg"
+                        alt="รูปการแข่งขัน Multi Skills Competition"
+                        class="certificate-image"
+                    >
 
 
                     <p class="certificate-main">
